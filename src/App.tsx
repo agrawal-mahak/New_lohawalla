@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
+import {Routes, Route} from 'react-router-dom';
+import Home from './screens/Home';
+
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline text-yellow-600">
-      Typescript Tailwind Sample
-    </h1>
+     <Routes>
+        <Route path='/' element={<Home/>}/>
+     </Routes>
   );  
 }
 
