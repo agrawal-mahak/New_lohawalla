@@ -2,7 +2,7 @@ import React from 'react'
 
 const ShopWithUs = () => {
   return (
-    <div className='bg-[#FFFFFF] px-4 py-2 border border-gray-400 h-[8rem] mt-2 w-[22rem]'>
+    <div className='bg-[#FFFFFF] px-4 py-2   h-[8rem] mt-2 w-[22rem]'>
         <h1 className='font-inter font-bold text-lg'>
             Shop with Us
         </h1>
