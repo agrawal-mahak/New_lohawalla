@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar";
 import Header from "../Components/Header";
 import ItemCard from "./Components/ItemCard";
 import { IoIosArrowDown } from "react-icons/io";
-import Footer from "../Footer/Footer";
+import Footer from "../../common/Footer";
 import { FaAngleRight } from "react-icons/fa6";
 import { FaAngleLeft } from "react-icons/fa6";
 import RelatedSearch from "./Components/RelatedSearch";

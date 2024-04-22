@@ -24,6 +24,7 @@ import shieldDone from "../../../assets/Shield_Done.png";
 import rect from '../../../assets/Rectangle.png'
 import shareIcon from "../../../assets/share.png";
 import star from "../assets/star.png";
+import cement from '../../src/assets/cardImg.png';
 // import { useAddToCartMutation } from '../../../Redux/Api/cartAPI';
 // import { ToastContainer, toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
@@ -97,8 +98,8 @@ const ProductCard = ({
                                     productName
                                 }}> */}
 
-                       <img src={image} alt='rect' className='relative md:h-[14rem] h-[10rem] w-[17rem] py-2 px-2
-                        hover:transform hover:scale-110 transition-transform duration-200 ease'/>
+                       <img src={cement} alt='rect' className='relative md:h-[14rem] h-[13.7rem] w-[17rem] py-3 
+                        '/>
                         {/* <div className='bg-[#DCFCE7] flex flex-row gap-2 z-20 absolute -mt-[13.9rem] md:ml-2 ml-1 px-2 py-1 rounded-xl items-center'>
                                 <img src={shieldDone} alt="shield" className='md:h-[15.56px] md:w-[13.22px] w-[8.81px] h-[10.37px]'></img>
                                 <h1 className='font-inter text-[#047857] md:text-sm text-[10px] whitespace-nowrap'>Lohawalla Assured</h1>
@@ -115,24 +116,29 @@ const ProductCard = ({
                      </div> */}
                 </div>
                 <div className='ml-2'>
-                    <h1 className='font-inter text-[#292D32] md:text-xl text-[12px] md:leading-6 leading-4 my-1 overflow-hidden max-h-[1rem] md:max-h-[1.5rem]'> 
-                     {/* {productName ? productName.split(' ').slice(0, window.innerWidth >= 768 ? 8 : 5).join(' ') : name ? name.split(' ').slice(0, window.innerWidth >= 768 ? 8 : 5).join(' ') : ''} */}name
+                    <h1 className='font-inter text-[#111827] md:text-xl text-[12px] md:leadingng-4 my-1 overflow-hidden max-h-[1rem] md:max-h-[1.5rem] font-bold'> 
+                     {/* {productName ? productName.split(' ').slice(0, window.innerWidth >= 768 ? 8 : 5).j-6 leadioin(' ') : name ? name.split(' ').slice(0, window.innerWidth >= 768 ? 8 : 5).join(' ') : ''} */}
+                        Ambuja Cement 
                     </h1>
-                    <p className='font-bold font-inter text-[#475569] md:text-[16px] text-[12px] md:leading-6 leading-4 mt-4 md:max-h-[1.5rem]'>
+                    <p className='font-inter text-[#111827] md:text-xl text-[12px] md:leadingng-4 my-1 overflow-hidden max-h-[1rem] md:max-h-[1.5rem] font-bold'>(300/Bag)</p>
+                    <p className='font-bold font-inter text-[#475569] md:text-[16px] text-[16px] md:leading-6 leading-4 mt-4 md:max-h-[1.5rem]'>
                     {/* {description ? 
                       description.substring(0, window.innerWidth >= 768 ? 32 : 25) : 
-                      description ? description.substring(0, window.innerWidth >= 768 ? 80 : 50) : 'more..'} */} description
+                      description ? description.substring(0, window.innerWidth >= 768 ? 80 : 50) : 'more..'} */} Pair=10KG
                     </p>
-                    <p className='font-bold font-inter text-[#94A3B8] md:text-xs text-[12px] md:leading-6 leading-4 mt-1'>{companyName ? "Company:" + companyName : ""}</p>
+                    <p className='font-bold font-inter text-[#94A3B8] md:text-xs text-[12px] md:leading-6 leading-4'>
+                      {/* {companyName ? "Company:" + companyName : ""} */}
+                        Company: Ambuja 
+                      </p>
                 </div>
                 {/* <p className='text-[#475569] text-[14px] font-bold md:text-[20px] my-1 ml-2'>₹{mrpPrice}</p> */}
-                <div className='flex flex-row md:justify-around justify-around my-1'>
-                    <div className='bg-[#3B82F6] rounded-md md:px-4 px-2 md:py-1 flex flex-row items-center gap-2 whitespace-nowrap'>
-                        <p className='text-[#FFFFFF] text-[10px] md:text-[12px]'>4.5</p>
-                        <img src={star} className='md:h-4 md:w-4 h-[10px] w-[10px]'/>
+                <div className='flex flex-row md:justify-around justify-around my-1 items-center mt-6'>
+                    <div className='bg-[#2563EB] rounded-md md:px-4 px-2 md:py-1 flex flex-row items-center gap-2 whitespace-nowrap'>
+                        <p className='text-[#FFFFFF] font-roboto font-semibold text-[12px] md:text-[12px] items-center'>3.7</p>
+                        <img src={star} className='md:h-4 md:w-4 h-[10px] w-[10px] items-center -mt-1'/>
                     </div>
-                    <p className='font-inter md:text-lg text-[12px] text-semibold text-[#94A3B8] whitespace-nowrap'>(474) reviews</p>
-                    <div className='hidden md:block px-2 py-1 bg-[#65A30D] rounded-lg text-[#F7FEE7] whitespace-nowrap font-inter font-bold'>12% discount</div>
+                    <p className='font-inter font-semibold  text-[12px] text-semibold text-[#94A3B8] whitespace-nowrap'>(474) reviews</p>
+                    <div className='hidden md:block px-2 py-1 bg-[#65A30D] rounded-lg text-[#F7FEE7] whitespace-nowrap font-inter font-bold text-[12px]'>12% discount</div>
                 </div>
 
                 {/* button */}
@@ -149,8 +155,8 @@ const ProductCard = ({
                                 }}> */}
                     <button 
                     // onClick={() => handleaddToCart(_id)}
-                    className='bg-[#0F172A] font-inter font-bold whitespace-nowrap md:mb-3 mb:-2 rounded-lg md:py-4 py-2 md:px-[3rem] px-2 my-1 md:text-sm text-[12px] text-[#CBD5E1]
-                              hover:bg-white hover:text-[#1E293B] hover:border-2 hover:border-[#1E293B] hover:transition hover:duration-500'>  
+                    className='bg-[#FEBD69] font-inter font-bold whitespace-nowrap md:mb-3 mb:-2 rounded-lg md:py-4 py-2 md:px-[3rem] px-2 my-2 md:text-sm text-[12px] text-[#0F172A]
+                              hover:bg-white hover:text-[#0F172A] hover:border-2 hover:border-[#1E293B] hover:transition hover:duration-500'>  
                         Contact For Better Pricing      
                     </button>
                 {/* </Link> */}

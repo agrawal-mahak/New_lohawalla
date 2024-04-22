@@ -3,7 +3,7 @@ import Imagesection from './Components/Imagesection';
 import ItemData from './Components/ItemData';
 import ProductDetails from './Components/ProductDetails';
 import Description from './Components/Description';
-import Footer from '../Footer/Footer';
+import Footer from '../../common/Footer';
 
  const SingleProduct = () => {
   return (
