@@ -98,7 +98,7 @@ const ProductCard = ({
                                     productName
                                 }}> */}
 
-                       <img src={cement} alt='rect' className='relative md:h-[14rem] h-[13.7rem] w-[17rem] py-3 
+                       <img src={image} alt='rect' className='relative md:h-[14rem] h-[13.7rem] w-[17rem] py-3 
                         '/>
                         {/* <div className='bg-[#DCFCE7] flex flex-row gap-2 z-20 absolute -mt-[13.9rem] md:ml-2 ml-1 px-2 py-1 rounded-xl items-center'>
                                 <img src={shieldDone} alt="shield" className='md:h-[15.56px] md:w-[13.22px] w-[8.81px] h-[10.37px]'></img>
@@ -117,18 +117,18 @@ const ProductCard = ({
                 </div>
                 <div className='ml-2'>
                     <h1 className='font-inter text-[#111827] md:text-xl text-[12px] md:leadingng-4 my-1 overflow-hidden max-h-[1rem] md:max-h-[1.5rem] font-bold'> 
-                     {/* {productName ? productName.split(' ').slice(0, window.innerWidth >= 768 ? 8 : 5).j-6 leadioin(' ') : name ? name.split(' ').slice(0, window.innerWidth >= 768 ? 8 : 5).join(' ') : ''} */}
-                        Ambuja Cement 
+                    {productName ? productName.split(' ').slice(0, window.innerWidth >= 768 ? 8 : 5).join(' ') : name ? name.split(' ').slice(0, window.innerWidth >= 768 ? 8 : 5).join(' ') : ''}
+                         
                     </h1>
                     <p className='font-inter text-[#111827] md:text-xl text-[12px] md:leadingng-4 my-1 overflow-hidden max-h-[1rem] md:max-h-[1.5rem] font-bold'>(300/Bag)</p>
                     <p className='font-bold font-inter text-[#475569] md:text-[16px] text-[16px] md:leading-6 leading-4 mt-4 md:max-h-[1.5rem]'>
-                    {/* {description ? 
+                    {description ? 
                       description.substring(0, window.innerWidth >= 768 ? 32 : 25) : 
-                      description ? description.substring(0, window.innerWidth >= 768 ? 80 : 50) : 'more..'} */} Pair=10KG
+                      description ? description.substring(0, window.innerWidth >= 768 ? 80 : 50) : 'more..'}  
                     </p>
                     <p className='font-bold font-inter text-[#94A3B8] md:text-xs text-[12px] md:leading-6 leading-4'>
-                      {/* {companyName ? "Company:" + companyName : ""} */}
-                        Company: Ambuja 
+                      {companyName ? "Company:" + companyName : ""}
+                        
                       </p>
                 </div>
                 {/* <p className='text-[#475569] text-[14px] font-bold md:text-[20px] my-1 ml-2'>₹{mrpPrice}</p> */}

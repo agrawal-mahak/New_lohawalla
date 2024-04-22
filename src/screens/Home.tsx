@@ -6,29 +6,55 @@ import DiscountCard from './Components/DiscountCard'
 import ShopWithUs from './Components/ShopWithUs'
 import ProductCard from '../common/ProductCard'
 import Carousel from './Components/Carousel'
+import HomeImg from '../assets/homeImg.png'
+import HomeVideo from '../assets/video.png'
+import cation from '../assets/caption.png'
+import FirstCategory from './Components/FirstCategory'
+import Footer from '../common/Footer'
+import Comp1 from './extra/Comp1'
+import Comp2 from './extra/Comp2'
 
 
 const Home = () => {
-  const images = [
-    'https://larainfo.com/storage/canvas/images/QS5nTwWLrJ5BDedU71tnj02j8ZxhFxx6lwpck1Oc.png?ezimgfmt=ng%3Awebp%2Fngcb2%2Frs%3Adevice%2Frscb2-2',
-    'https://example.com/image2.jpg',
-    'https://example.com/image3.jpg',
-  ];
+  const slides = [<Comp1/>, <Comp2/>];
 
   return (
-    <div>   
+    <div className='bg-[#E2E8F0]'>   
         <Navbar/>  
         <Header/>
-        <Carousel images={images}/>
-         <div className='flex flex-row gap-2'>
-            <CategoryCard/>
-            <DiscountCard/>
-            <ShopWithUs/>
-            
-         </div>
-         <div className='ml-10'>
-            <ProductCard/>
-         </div>
+        <div className='gap-6 mx-auto mt-2.5 w-[70rem] bg-[ ]'>
+         <Carousel slides={slides}/>
+        </div>
+         
+        <div className='bg-[#E2E8F0]'>
+            <div className='flex flex-wrap gap-6 mx-auto mt-[30.5rem] w-[70rem]'>
+                <CategoryCard/>
+                <DiscountCard/>
+                 <div className='flex flex-col gap-3'>
+                    <ShopWithUs/>
+                    <div>
+                        <img src={HomeImg} alt='home'/>
+                    </div>
+                 </div>
+
+                 <div className='flex gap-6'>
+                     <div>
+                         <img src={HomeVideo} alt='video' className='h-[26.2rem] relative z-0'/>
+                         <img src={cation} alt='caption' className='relative mt-[-26.2rem]'/>
+                     </div>
+                     <CategoryCard/>
+                 </div>
+                
+            </div>
+
+            <div>
+                <FirstCategory/>
+                <FirstCategory/>
+           </div>
+        </div>
+
+        <Footer/>
+         
 
     </div>
   )
