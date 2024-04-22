@@ -1,4 +1,4 @@
-import logo from "../../../../assets/footerLogo.png"
+import logo from "../assets/footerLogo.png"
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -21,11 +21,11 @@ const Footer = () => {
   };  
 
   return (       
-    <div className='px-[30px]  sm:px-[70px] lg:px-[100px] py-[76px] bg-[#2A333E] overflow-hidden'>
+    <div className='px-[30px]  sm:px-[70px] lg:px-[100px] py-[76px] bg-[#5097A4] overflow-hidden'>
          <div className='flex flex-col md:flex-row gap-10 justify-between'>
                 <div className=" flex  gap-[9rem] justify-evenly w-full  ">
                       <div className='flex flex-col'>
-                              <div className='text-[#8491A3] pb-[19px] font-[700] text-[14px] leading-[19.6px] tracking-[0.125rem] font-sans'>
+                              <div className='text-[#FFFFFF] pb-[19px] font-[700] text-[14px] leading-[19.6px] tracking-[0.125rem] font-sans'>
                                   QUICK LINKS  
                               </div>  
 
@@ -41,7 +41,7 @@ const Footer = () => {
                       </div>   
                     
                       <div className='flex flex-col '>
-                              <div className='text-[#8491A3] pb-[19px] font-[700] text-[14px] leading-[19.6px] tracking-[0.125rem] font-sans'>
+                              <div className='text-[#FFFFFF] pb-[19px] font-[700] text-[14px] leading-[19.6px] tracking-[0.125rem] font-sans'>
                                   RESOURCES 
                               </div>
 
@@ -59,7 +59,7 @@ const Footer = () => {
 
                <div className="flex justify-around w-full ">
                <div className='flex flex-col'>
-                      <div className='text-[#8491A3] pb-[19px] font-[700] text-[14px] leading-[19.6px] tracking-[0.125rem] font-sans'>
+                      <div className='text-[#FFFFFF] pb-[19px] font-[700] text-[14px] leading-[19.6px] tracking-[0.125rem] font-sans'>
                            COMPANY             
                       </div>
 
@@ -70,7 +70,7 @@ const Footer = () => {
                </div> 
                                                    
                <div className='flex flex-col'>
-                      <div className='text-[#8491A3] pb-[19px] font-[700] text-[14px] leading-[19.6px] tracking-[0.125rem] font-sans'>
+                      <div className='text-[#FFFFFF] pb-[19px] font-[700] text-[14px] leading-[19.6px] tracking-[0.125rem] font-sans'>
                           CONTACT US
                       </div> 
 
@@ -89,7 +89,7 @@ const Footer = () => {
                           </div>      
                        </Link>  
                 
-                       <div className="flex flex-col gap-5 whitespace-nowrap md:flex-row font-[400] text-[12px] leading-[21.6px] text-[#8491A3] w-full font-inter">
+                       <div className="flex flex-col gap-5 whitespace-nowrap md:flex-row font-[400] text-[12px] leading-[21.6px] text-[#FFFFFF] w-full font-inter">
                           <span className="cursor-pointer">© 2023 Lohawalla. All rights reserved.</span>
                           <span className="cursor-pointer">Terms of Service</span>
                           <span className="cursor-pointer">  Privacy Policy</span>    

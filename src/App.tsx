@@ -4,9 +4,6 @@ import {Routes, Route} from 'react-router-dom';
 import Items from './screens/ItemsPage/Items';
 import Home from './screens/Home';
  
- 
-
-
 function App() {
   return (
      <Routes>
