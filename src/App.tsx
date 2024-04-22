@@ -4,6 +4,8 @@ import {Routes, Route} from 'react-router-dom';
 import Home from './Screens/Home';
 import Items from './Screens/ItemsPage/Items';
 import ItemCard from './Screens/ItemsPage/Components/ItemCard';
+import SingleProduct from './Screens/SingleProduct/SingleProduct';
+import Description from './Screens/SingleProduct/Components/Description';
 
 
 function App() {
@@ -11,11 +13,11 @@ function App() {
      <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/items' element={<Items/>}/>
+        <Route path='/singleproduct' element={<SingleProduct />}/>
+
      </Routes>
 
-   // <div>
-   //      <ItemCard />
-   // </div>
+   
   );  
 }
 

@@ -6,7 +6,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const ItemCard = () => {
   return (
-    <div className=' flex gap-[2rem] py-[18px] '>
+    <div className=' flex gap-[2rem] py-[18px] border-t border-b w-full '>
           <div>
           <img src={item} alt='item' />
           </div>
@@ -18,10 +18,10 @@ const ItemCard = () => {
                 
                 ₹71,999 Save ₹7,000 (13%)</div>
                <div className='text-[#565959] font-[400] text-[14px] leading-[16px] '>This item will be released on September 10, 2021.</div>
-                 <div className="flex text-center items-center  ">
+                 <div className="flex text-center text-[#007185] items-center  ">
                <div className="flex  pr-[12px] font-[400] text-[14px] leading-[16px] text-[]"><FaStar className="text-yellow-600" /> <FaStar className="text-yellow-600" /> <FaStar className="text-yellow-600" /> <FaStar className="text-yellow-600" /> <FaStarHalfStroke className="text-yellow-600" />  
                </div>  
-                  <IoIosArrowDown />  1084
+                  <IoIosArrowDown className="text-black" />  1,084
                </div>
          </div>
     </div>
