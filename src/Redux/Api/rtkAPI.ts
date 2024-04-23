@@ -5,7 +5,7 @@ export const api = createApi({
 
     baseQuery: fetchBaseQuery({
         
-        baseUrl: basePath,
+        baseUrl: basePath,  
         prepareHeaders: async (headers) => {
             headers.set('Content-Type', 'application/json')
             return headers
@@ -14,6 +14,7 @@ export const api = createApi({
     }),
     tagTypes:["cart","address","inventory","category"],
     endpoints: () => ({}),
-    reducerPath: 'api',
-   
+    reducerPath: 'api',   
 })
+
+

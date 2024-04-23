@@ -6,9 +6,13 @@ import { IoIosArrowDown } from "react-icons/io";
 import Footer from "../../common/Footer";
 import { FaAngleRight } from "react-icons/fa6";
 import { FaAngleLeft } from "react-icons/fa6";
+import { useLocation } from "react-router-dom";
 import RelatedSearch from "./Components/RelatedSearch";
 
 const Items = () => {
+  const location = useLocation()
+  const category = location.state.name;
+  console.log(category, "cat");
   return (
     <div>
       <Navbar />
@@ -27,7 +31,7 @@ const Items = () => {
         </div>
       </div>
 
-      <div className=" flex  h-full gap-[2rem] px-[1.67rem]">
+      <div className=" flex  h-full gap-[2rem] px-[1.67rem]">   
         <div className=" w-[270px]  h-[500px] pl-[30px] flex flex-col gap-[0.6rem] border-r-[2px]">
           <div className="flex flex-col gap-[0.6rem]  mt-[16px]">
             <div className="font-[700] text-[14px] leading-[16px] ">
@@ -124,7 +128,7 @@ const Items = () => {
 
         <div className="h-[96px] flex justify-center items-center  ">
              
-               <div className="flex flex justify-center items-center border  gap-[19px]  h-[48px]">
+               <div className="flex justify-center items-center border  gap-[19px]  h-[48px]">
               <FaAngleLeft />
               <span>
                 Previous

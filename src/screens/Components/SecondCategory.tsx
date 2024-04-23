@@ -6,10 +6,10 @@ import { Product } from '../../types/types';
 import defaultImg from '../../assets/cement.png';
 
 const SecondCategory = () => {
-  const { data: CategoryProducts2 } =  useCategoryProductAPI2Query("");
+  const { data: CategoryProducts2 } = useCategoryProductAPI2Query("");
    console.log(CategoryProducts2 , 'cat2');
 
-   const name2 = CategoryProducts2?.[2]?.name; // Safely access the first category name
+   const name2 = CategoryProducts2?.[2]?.name;  
    const { data: CategoryProductsResponse2 } = useParticularCategory2Query(
      name2 || ""
    );
@@ -28,13 +28,13 @@ const SecondCategory = () => {
             </div>
 
             <div className='flex flex-wrap gap-10 mx-24 my-3 p'>
-            {CategoryProductsResponse2?.product.slice(0, 4).map((i: Product) => (
+            {CategoryProductsResponse2?.product.slice(0, 4).map((i: Product) => (  
               <ProductCard
                 key={i._id}
                 _id={i._id}
                 name={i.name}
                 description={i.description}
-                mrpPrice={`${i.netRate.toFixed(3)} / ${i.itemUnit}`}
+                mrpPrice={`${i.netRate.toFixed(3)} / ${i.itemUnit}`}  
                 image={i.image.length > 0 ? i.image[0] : defaultImg}
                 status={i.status}
               />

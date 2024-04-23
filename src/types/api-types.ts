@@ -15,4 +15,10 @@ export type AllCategoriesResponse = {
   export type CategoryProductsResponse2 = {
     result: Product[];
   };
+
+  export type SearchProductsResponse = {
+    message: string;
+    total: number; 
+    products: Product[];
+  };
  
