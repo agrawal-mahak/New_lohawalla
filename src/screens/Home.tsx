@@ -13,7 +13,8 @@ import FirstCategory from './Components/FirstCategory'
 import Footer from '../common/Footer'
 import Comp1 from './extra/Comp1'
 import Comp2 from './extra/Comp2'
-
+import SecondCategory from './Components/SecondCategory'
+import CategorySecond from './Components/CategorySecond'
 
 const Home = () => {
   const slides = [<Comp1/>, <Comp2/>];
@@ -39,17 +40,17 @@ const Home = () => {
 
                  <div className='flex gap-6'>
                      <div>
-                         <img src={HomeVideo} alt='video' className='h-[26.2rem] relative z-0'/>
-                         <img src={cation} alt='caption' className='relative mt-[-26.2rem]'/>
+                         <img src={HomeVideo} alt='video' className='h-[23rem] relative z-0'/>
+                         <img src={cation} alt='caption' className='relative mt-[-23.2rem] h-[23rem]'/>
                      </div>
-                     <CategoryCard/>
+                     <CategorySecond/>
                  </div>
                 
             </div>
 
             <div>
                 <FirstCategory/>
-                <FirstCategory/>
+                <SecondCategory/>
            </div>
         </div>
 

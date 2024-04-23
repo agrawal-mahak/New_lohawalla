@@ -1,37 +1,36 @@
 import React from 'react'
 import ProductCard from '../../common/ProductCard'
 import {Link} from 'react-router-dom'
-import { useCategoryProductAPIQuery, useParticularCategoryQuery } from '../../Redux/Api/Category';
+import { useCategoryProductAPI2Query, useCategoryProductAPIQuery, useParticularCategory2Query, useParticularCategoryQuery } from '../../Redux/Api/Category';
 import { Product } from '../../types/types';
 import defaultImg from '../../assets/cement.png';
 
-const FirstCategory = () => {
-  const { data: CategoryProducts } =    useCategoryProductAPIQuery("");
-  // console.log(CategoryProducts , 'cat');
+const SecondCategory = () => {
+  const { data: CategoryProducts2 } =  useCategoryProductAPI2Query("");
+   console.log(CategoryProducts2 , 'cat2');
 
-  const name = CategoryProducts?.[0]?.name; // Safely access the first category name
-  const { data: CategoryProductsResponse } = useParticularCategoryQuery(
-    name || ""
-  );
-   console.log(CategoryProductsResponse, "name response")
+   const name2 = CategoryProducts2?.[2]?.name; // Safely access the first category name
+   const { data: CategoryProductsResponse2 } = useParticularCategory2Query(
+     name2 || ""
+   );
 
   return (
     <div className='bg-[#FFFFFF] w-full mt-10 py-5'>
             <div className='flex justify-between items-center p-3 mx-16'>
                 <h1 className='text-[#1E293B] font-inter text-2xl font-semibold'>
-                    {CategoryProductsResponse?.product[1].name}
+                    {CategoryProductsResponse2?.product[1].name}
                 </h1>
               <Link to=''>
                 <span className='font-inter font-semibold text-[1rem] text-[#5097A4]'>
-                        Shop the collection → 
+                        Shop of collection →
                 </span>
               </Link>
             </div>
 
             <div className='flex flex-wrap gap-10 mx-24 my-3 p'>
-            {CategoryProductsResponse?.product.slice(0, 4).map((i: Product) => (
+            {CategoryProductsResponse2?.product.slice(0, 4).map((i: Product) => (
               <ProductCard
-                key={i._id}  
+                key={i._id}
                 _id={i._id}
                 name={i.name}
                 description={i.description}
@@ -45,4 +44,4 @@ const FirstCategory = () => {
   )
 }
 
-export default FirstCategory
+export default SecondCategory

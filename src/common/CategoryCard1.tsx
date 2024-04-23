@@ -23,7 +23,7 @@ type MobileCardProps = {
   //    weight: number;
   //    thickness: number ;
   //    material:string;
-  //    category: Categories;
+  //    category: Categories;      
   //    review: string;
   _id?: string;
   status?: boolean;
@@ -59,7 +59,7 @@ const ProductCard = ({
     const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
-
+  
   return (
         // <div className='md:w-[18.5rem] w-[11rem] h-full bg-white border border-[#ECF0F0] md:border md:border-[#ECF0F0] rounded-lg shadow-md shadow-gray-500/50
         //    hover:transform hover:scale-110 transition-transform duration-300 ease-out '>
@@ -87,7 +87,7 @@ const ProductCard = ({
 
                     {/* <div className='bg-white cursor-pointer border-[#ECF0F0] rounded-bl-xl px-3  py-3 z-20 absolute  md:ml-[17rem] ml-[8.3rem]'>
                         <img src={shareIcon} className='h-[18px] w-[18px] md:h-[32px] md:w-[32px]' onClick={shareOnWhatsApp}></img>
-                    </div> */}
+                    </div> */}  
                      {/* <div
                         onClick={() => _id && addToWishList(_id)}
                         >
@@ -101,13 +101,12 @@ const ProductCard = ({
                     </h1>
                     <p className='font-inter text-[#111827] md:text-xl text-[12px] md:leadingng-4 my-1 overflow-hidden max-h-[1rem] md:max-h-[1.5rem] font-bold'>(300/Bag)</p>
                     <p className='font-bold font-inter text-[#475569] md:text-[16px] text-[16px] md:leading-6 leading-4 mt-4 md:max-h-[1.5rem]'>
-                    {description ? 
-                      description.substring(0, window.innerWidth >= 768 ? 32 : 25) : 
-                      description ? description.substring(0, window.innerWidth >= 768 ? 80 : 50) : 'more..'}  
+                      {description ? 
+                        description.substring(0, window.innerWidth >= 768 ? 32 : 25) : 
+                        description ? description.substring(0, window.innerWidth >= 768 ? 80 : 50) : 'more..'}  
                     </p>
                     <p className='font-bold font-inter text-[#94A3B8] md:text-xs text-[12px] md:leading-6 leading-4'>
-                      {companyName ? "Company:" + companyName : ""}
-                        
+                      {companyName ? "Company:" + companyName : ""}  
                       </p>
                 </div>
                 {/* <p className='text-[#475569] text-[14px] font-bold md:text-[20px] my-1 ml-2'>₹{mrpPrice}</p> */}
@@ -118,7 +117,7 @@ const ProductCard = ({
                     </div>
                     <p className='font-inter font-semibold  text-[12px] text-semibold text-[#94A3B8] whitespace-nowrap'>(474) reviews</p>
                     <div className='hidden md:block px-2 py-1 bg-[#65A30D] rounded-lg text-[#F7FEE7] whitespace-nowrap font-inter font-bold text-[12px]'>12% discount</div>
-                </div>
+                </div>       
 
                 {/* button */}
                <div className='flex justify-center '>

@@ -15,3 +15,4 @@ export type AllCategoriesResponse = {
   export type CategoryProductsResponse2 = {
     result: Product[];
   };
+ 
