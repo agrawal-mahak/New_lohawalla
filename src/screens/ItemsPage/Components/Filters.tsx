@@ -17,6 +17,7 @@ type FiltersProps = {
 
 
 export const Filters: React.FC<FiltersProps> = ({ categorychange }) => {
+  const [dispalycount ,setDisplayCount] = useState<number>(5)
   const { data: categoriesResponse } = useCategoriesNameQuery(
     {},
     { refetchOnMountOrArgChange: true }
@@ -36,6 +37,7 @@ export const Filters: React.FC<FiltersProps> = ({ categorychange }) => {
   console.log(formData,"sahi to mera code")
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -64,7 +66,13 @@ export const Filters: React.FC<FiltersProps> = ({ categorychange }) => {
       })
     : [];
 
-  const categoriesToDisplay = filteredCategories.slice(0, 5);
+    const handleMoreClick = () => {
+      setDisplayCount(prevCount => prevCount +5);
+  }   
+
+
+const categoriesToDisplay = filteredCategories.slice(0, dispalycount);
+
 
 
 
@@ -111,7 +119,7 @@ export const Filters: React.FC<FiltersProps> = ({ categorychange }) => {
             )}
           </div>
 
-          <div className="flex items-center gap-[3px]">
+          <div className="flex items-center gap-[3px]" onClick={handleMoreClick}>
             <IoIosArrowDown />
             <div className="text-[#007185] font-[500] text-[14px] leading-[16px]">
               See more 

@@ -22,7 +22,7 @@ import { api } from "./rtkAPI";
           };
         }  
       }),
- 
+
       categoryProductAPI2: builder.query<CategoryProductsResponse2, string>({
         query: () => {
           console.log("I m cat2");
@@ -33,7 +33,7 @@ import { api } from "./rtkAPI";
           };
         },
       }),
- 
+
       particularCategory2: builder.query<CategoryProductsResponse, string>({
         query: (name2) => {
           console.log(name2, 'vgvtg');
@@ -43,7 +43,7 @@ import { api } from "./rtkAPI";
           };
         }  
       }),
- 
+
       allCategories: builder.query<AllCategoriesResponse, string>({
         query: () => {
           return {
@@ -54,5 +54,5 @@ import { api } from "./rtkAPI";
       }),
     }),
   });
- 
+  
   export const { useCategoryProductAPIQuery, useParticularCategoryQuery , useCategoryProductAPI2Query, useParticularCategory2Query,useAllCategoriesQuery } = categoryProductAPI;

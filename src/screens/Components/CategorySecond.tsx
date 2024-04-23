@@ -15,17 +15,18 @@ interface ImgCardProps {
 
 const CategoryCard = () => {
   const { data, isLoading } = useAllCategoriesQuery("");
-  // console.log(data, 'data');
+  console.log(data, 'data2');
 
   return (
-    <div className='bg-[#ffffff] p-5 mt-2 max-w-[23rem]'> 
-      <h1 className='font-inter font-bold text-md pb-2'>Top Category for you</h1>
-      <div className='flex flex-col gap-4'>
+    <div className='bg-[#ffffff] max-w-[23rem] h-[23rem] p-6'> 
+      <h1 className='font-inter font-bold text-md pb-2'>Build your home With us</h1>
+      <div className='flex flex-col gap-4'>  
         <div className='flex gap-4 flex-wrap'>
-          {data?.slice(0,4).map((category: CardData) => (   
+          {data?.slice(4,8).map((category: CardData) => (   
             <ImgCard key={category.id} data={category}/>
           ))}
-        </div>      
+        </div>  
+        <h2 className='text-[#007185] font-inter text-md font-semibold mt-4'>See more</h2>    
       </div>
     </div>
   );

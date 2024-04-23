@@ -65,14 +65,14 @@ const Companies: React.FC<companiesProps> = ({companychange}) => {
     <div>
 
 <div className="flex flex-col gap-[0.6rem]">
-          <div className="font-[700] text-[14px] leading-[16px] ">Brand</div>
+          <div className="font-[700] text-[14px] leading-[16px] ">Companies</div>
 
            <div className='flex border items-center  bg-[#F8FAFC] mr-3 py-1 rounded-[7px]'>
               <IoSearch size={18} className='text-[#9C3AF] pl-[4px]' />
              <input 
                type='text'
                name='search'
-               placeholder='search'
+               placeholder='Search'
                value={form.search}
                onChange={handleInputChange}
                className="font-inter leading-7 text-[#9CA3AF] ml-2 md:w-[599px] font-Inter text-md bg-[#F8FAFC] border-[#D1D5DB] focus:outline-none focus:ring-2 focus:ring-[#D1D5DB] rounded-md"

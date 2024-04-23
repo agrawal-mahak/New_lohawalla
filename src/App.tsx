@@ -1,16 +1,9 @@
 import React from 'react';
 import './App.css';
 import {Routes, Route} from 'react-router-dom';
-import Home from './Screens/Home';
-import Items from './Screens/ItemsPage/Items';
-import ItemCard from './Screens/ItemsPage/Components/ItemCard';
-import SingleProduct from './Screens/SingleProduct/SingleProduct';
-import Description from './Screens/SingleProduct/Components/Description';
-
-
- 
- 
-
+import Home from './screens/Home';
+import Items from './screens/ItemsPage/Items';
+import SingleProduct from './screens/SingleProduct/SingleProduct';
 
 
 function App() {
