@@ -83,7 +83,7 @@ const Footer = () => {
                                       
         <div className='h-[49.72px]  flex flex-row mt-[100px] justify-between'>
                  <div className="flex flex-row h-[49.72px] gap-[40px]">          
-                       <Link to='/home'>  
+                       <Link to='/'>  
                           <div>
                               <img src={logo} className="w-[50px] h-12"/>
                           </div>      

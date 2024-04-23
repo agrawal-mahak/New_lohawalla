@@ -1,16 +1,35 @@
-
 import item from "../../../assets/item.png"
 import { FaStar } from "react-icons/fa6";
 import { FaStarHalfStroke } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
-
-
-
-
-
-const ItemCard = ({ data }) => {
+ 
+interface ItemData {
+  GSt: {
+    type: string;
+    value: number;
+  };
+  companyName: string;
+  description: string;
+  images: string[];
+  itemCode: string;
+  margin: {
+    cash: number;
+    online: number;
+  };
+  priceField: {
+    name: string;
+    value: number;
+    operation: string;
+    type: string;
+    position: number;
+  }[];
+  productName: string;
+  unit: string;
+}
+ 
+const ItemCard: React.FC<{ data: ItemData }> = ({ data }) => {
   // console.log(data,"Hordt")
-
+ 
   return (
     <div className=' flex gap-[2rem] py-[18px] border-t border-b w-full '>
           <div>
@@ -21,7 +40,7 @@ const ItemCard = ({ data }) => {
                <div className='font-[500] text-[18px] leading-[21px]'>{data.productName}</div>
                <div className='font-[500] text-[14px] leading-[17px] flex  items-center gap-[9px] '>
                 <div className='font-[500] text-[18px] leading-[21px] text-[#B12704] '>₹64,500 /Ton</div>
-                
+               
                 ₹71,999 Save ₹7,000 (13%)</div>
                <div className='text-[#565959] font-[400] text-[14px] leading-[16px] '>{data.description}</div>
                  <div className="flex text-center text-[#007185] items-center  ">
@@ -33,5 +52,5 @@ const ItemCard = ({ data }) => {
     </div>
   )
 }
-
-export  default ItemCard;
+ 
+export  default ItemCard
