@@ -2,7 +2,7 @@ import React from 'react'
 import ProductCard from '../../common/ProductCard'
 import {Link} from 'react-router-dom'
 import { useCategoryProductAPIQuery, useParticularCategoryQuery } from '../../Redux/Api/Category';
-import { Product } from '../../types.ts/types';
+import { Product } from '../../types/types';
 import defaultImg from '../../assets/cement.png';
 
 const FirstCategory = () => {

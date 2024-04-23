@@ -22,8 +22,8 @@ const Table: React.FC<TableProps> = ({ data }) => {
             <tbody>
               {data.map((row, index) => (
                 <tr key={index}>
-                  <td className="border-2 border-[#64748B] px-4 py-2">{row.data}</td>
-                  <td className="border-2 border-[#64748B] px-4 py-2">{row.values}</td>
+                  <td className="border-2 border-[#64748B] px-4 py-2 font-[500] text-[16px] leading-[24px] text-center ">{row.data}</td>
+                  <td className="border-2 border-[#64748B] px-4 py-2  font-[500] text-[16px] leading-[24px] text-center ">{row.values}</td>
                 </tr>
               ))}           
             </tbody>

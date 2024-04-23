@@ -1,81 +1,7 @@
-
-// // import {
-// //     AdminResponse,
-// //     AllCategoriesResponse,
-// //     GetCatProductResponse,
-    
-// //   } from "../../types/api-types";
-//   import { api } from "./rtkAPI";
-//   import { lhwpath } from "../apiRoutes";
-// import { AllCategoriesResponse } from "../../types.ts/api-types";
-  
-//   export const categoryQuery: any = api.injectEndpoints({
-//     endpoints: (builder) => ({
-//       allCategories: builder.query<AllCategoriesResponse, string>({
-//         query: () => {
-//           return {
-//             url: `${lhwpath}getCategories/publish`,
-//             method: "GET",
-//           };
-//         },
-//       }),
-  
-//     //   adminCategories: builder.query<AdminResponse, {page: number , limit: string}>({
-//     //     query: ({page,limit}) => {
-//     //       const limitNumber = parseInt(limit);
-//     //         console.log(page,limitNumber)
-//     //       return {
-//     //         url: `${lhwpath}customer/admin/getCategories/?page=${page}&limit=${limitNumber}`,
-//     //         method: "GET",
-//     //       };
-//     //     },
-//     //   }),
-  
-  
-  
-//     //   getCategoryProducts: builder.mutation<GetCatProductResponse,{ name: string }>({
-//     //     query: ({ name }) => {
-//     //       console.log("i m ", name);
-//     //       return {
-//     //         url: `${lhwpath}searchData/${name}`,
-//     //         method: "GET",
-//     //       };
-//     //     },
-  
-//     //     // providesTags: ["category"] ,   // Specify cache tags to invalidate
-//     //   }),
-  
-  
-//     //   getAdminCategoryProducts: builder.query<GetCatProductResponse,{ name: string }>({
-//     //     query: ({ name }) => {
-//     //       console.log("i m ", name);
-//     //       return {
-//     //         url: `${lhwpath}customer/admin/searchData/${name}`,
-//     //         method: "GET",
-//     //       };
-//     //     },
-  
-//     //      providesTags: ["category"] ,   // Specify cache tags to invalidate
-//     //   }),
-  
-  
-  
-  
-  
-//     }),
-//   });
-  
-//   export const { useAllCategoriesQuery, useGetCategoryProductsMutation, useGetAdminCategoryProductsQuery , useAdminCategoriesQuery } =
-//     categoryQuery;
-  
-
-
- 
- 
-  import { CategoryProductsResponse } from "../../types.ts/api-types";
+import { AllCategoriesResponse, CategoryProductsResponse, CategoryProductsResponse2 } from "../../types/api-types";
 import { lhwpath } from "../apiRoutes";
 import { api } from "./rtkAPI";
-  
+ 
   export const categoryProductAPI: any = api.injectEndpoints({
     endpoints: (builder) => ({
       categoryProductAPI: builder.query<CategoryProductsResponse, string>({
@@ -86,7 +12,7 @@ import { api } from "./rtkAPI";
           };
         },
       }),
-
+ 
       particularCategory: builder.query<CategoryProductsResponse, string>({
         query: (name) => {
           console.log(name)
@@ -96,7 +22,37 @@ import { api } from "./rtkAPI";
           };
         }  
       }),
+ 
+      categoryProductAPI2: builder.query<CategoryProductsResponse2, string>({
+        query: () => {
+          console.log("I m cat2");
+          return {
+            url: "https://www.lohawalla.com/global/getCategories/publish",
+            // url: "https://www.lohawalla.com/global/searchData/ACCESSORIES roof",
+            method: "GET",
+          };
+        },
+      }),
+ 
+      particularCategory2: builder.query<CategoryProductsResponse, string>({
+        query: (name2) => {
+          console.log(name2, 'vgvtg');
+          return {
+            url: `${lhwpath}searchData/${name2}`,
+            method: "GET",
+          };
+        }  
+      }),
+ 
+      allCategories: builder.query<AllCategoriesResponse, string>({
+        query: () => {
+          return {
+            url: `${lhwpath}getCategories/publish`,
+            method: "GET",
+          };
+        },
+      }),
     }),
   });
-  
-  export const { useCategoryProductAPIQuery, useParticularCategoryQuery } = categoryProductAPI;
+ 
+  export const { useCategoryProductAPIQuery, useParticularCategoryQuery , useCategoryProductAPI2Query, useParticularCategory2Query,useAllCategoriesQuery } = categoryProductAPI;
