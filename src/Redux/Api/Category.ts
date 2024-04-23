@@ -1,7 +1,7 @@
 import { AllCategoriesResponse, CategoryProductsResponse, CategoryProductsResponse2 } from "../../types/api-types";
 import { lhwpath } from "../apiRoutes";
 import { api } from "./rtkAPI";
-  
+ 
   export const categoryProductAPI: any = api.injectEndpoints({
     endpoints: (builder) => ({
       categoryProductAPI: builder.query<CategoryProductsResponse, string>({
@@ -12,7 +12,7 @@ import { api } from "./rtkAPI";
           };
         },
       }),
-
+ 
       particularCategory: builder.query<CategoryProductsResponse, string>({
         query: (name) => {
           console.log(name)
