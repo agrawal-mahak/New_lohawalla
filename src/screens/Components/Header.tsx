@@ -12,8 +12,8 @@ const Header = () => {
          <div className='ml-12 flex  items-center gap-6 font-inter text-[#252F3D] font-semibold text-sm'>
             <RxHamburgerMenu/>
             {data?.slice(10,22).map((item:any, index:any) => (
-              <p key={index} onClick={() => navigate('/singleproduct')}>{item.name}</p>
-            ))}       
+              <p key={index} onClick={() => navigate('/items')}>{item.name}</p>
+            ))}        
          </div>
     </div>
   )

@@ -12,7 +12,19 @@ const tableData = [
   { data: "Thickness", values: "253 inch" },
 ];
 
-const ItemData = () => {
+export interface ItemDataProps {
+  productName: string;
+  name: string;
+  mrpPrice: number;
+  status: string;
+  description: string;
+  image: string;
+  _id: string;
+  data: any; // Adjust the type according to the shape of your data
+  isLoading: boolean;
+}
+
+const ItemData: React.FC<ItemDataProps> = ({ productName, name, mrpPrice, status, description, image, _id, data, isLoading }) => {
   return (
     <div className="px-[80px]">
       {/* table */}
@@ -23,7 +35,7 @@ const ItemData = () => {
           </div>
           <div className="flex justify-between ">
             <div className="font-[500] text-[30px] leading-[36px]">
-              INDOSTAR 8mm TMT BAR
+              {name}
             </div>
 
             <div className="w-[163px] h-[40px] border rounded-[4px] flex justify-center items-center bg-[#FEBD69] font-[700] text-[16px] leading-[20px] ">
@@ -35,7 +47,7 @@ const ItemData = () => {
         <div className="flex flex-col gap-[17px]">
           <div className="px-[20px] py-[24px] border">
             <div className="font-[600] text-[24px] leading-[32px]">
-              Rs 55,098.897/ton
+              Rs  {mrpPrice}
             </div>
             <div className="font-[500] text-[14px] leading-[19px] del text-[#5C5C77]">
               MRP{" "}
