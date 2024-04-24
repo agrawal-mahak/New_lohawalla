@@ -1,18 +1,20 @@
 import React from 'react'
 import ProductCard from '../../common/ProductCard'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import { useCategoryProductAPI2Query, useCategoryProductAPIQuery, useParticularCategory2Query, useParticularCategoryQuery } from '../../Redux/Api/Category';
 import { Product } from '../../types/types';
 import defaultImg from '../../assets/cement.png';
 
 const SecondCategory = () => {
+  const navigate = useNavigate();
   const { data: CategoryProducts2 } = useCategoryProductAPI2Query("");
    console.log(CategoryProducts2 , 'cat2');
 
-   const name2 = CategoryProducts2?.[2]?.name;  
+   const name2 = CategoryProducts2?.[4]?.name;  
    const { data: CategoryProductsResponse2 } = useParticularCategory2Query(
      name2 || ""   
    );
+   console.log(CategoryProductsResponse2,"categoryResponse");
 
   return (
     <div className='bg-[#FFFFFF] w-full mt-10 py-5'>
@@ -20,11 +22,11 @@ const SecondCategory = () => {
                 <h1 className='text-[#1E293B] font-inter text-2xl font-semibold'>
                     {CategoryProductsResponse2?.product[1].name}
                 </h1>
-              <Link to=''>
+                <div  className='cursor-pointer' onClick={() => navigate("/items", {state: { name: CategoryProductsResponse2?.product[1].cname}})}  > 
                 <span className='font-inter font-semibold text-[1rem] text-[#5097A4]'>
                         Shop of collection →
                 </span>
-              </Link>
+              </div>
             </div>
 
             <div className='flex flex-wrap gap-10 mx-24 my-3 p'>
