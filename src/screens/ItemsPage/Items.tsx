@@ -6,6 +6,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import Footer from "../../common/Footer";
 import { FaAngleRight } from "react-icons/fa6";
 import { FaAngleLeft } from "react-icons/fa6";
+import { useLocation } from "react-router-dom";
 import RelatedSearch from "./Components/RelatedSearch";
 import { Filters } from "./Components/Filters";
 import Companies from "./Components/Companies";
@@ -14,6 +15,10 @@ import { CombinedState } from "../../types/api-types";
 import { Form } from "../../types/types";
 
 const Items = () => {
+  const location = useLocation()
+  const cat = location.state.name;
+  console.log(cat, "cat");
+
   const [searchFilters, { data: SearchProductsResponse }, isLoading, isError] =
     useSearchFiltersMutation();
 

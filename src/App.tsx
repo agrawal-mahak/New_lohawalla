@@ -14,8 +14,6 @@ function App() {
         <Route path='/singleproduct' element={<SingleProduct />}/>
 
      </Routes>
-
-   
   );  
 }
 

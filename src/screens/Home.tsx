@@ -15,20 +15,21 @@ import Comp1 from './extra/Comp1'
 import Comp2 from './extra/Comp2'
 import SecondCategory from './Components/SecondCategory'
 import CategorySecond from './Components/CategorySecond'
+import Comp3 from './extra/Comp3'
 
 const Home = () => {
-  const slides = [<Comp1/>, <Comp2/>];
+  const slides = [<Comp1/>, <Comp2/>, <Comp3/>];
 
   return (
     <div className='bg-[#E2E8F0]'>   
         <Navbar/>  
         <Header/>
-        <div className='gap-6 mx-auto mt-2.5 w-[70rem] bg-[ ]'>
+        <div className='gap-6 mx-auto w-[80rem]'>
          <Carousel slides={slides}/>
         </div>
          
         <div className='bg-[#E2E8F0]'>
-            <div className='flex flex-wrap gap-6 mx-auto mt-[30.5rem] w-[70rem]'>
+            <div className='flex flex-wrap gap-6 mx-auto mt-[27.5rem] w-[70rem]'>
                 <CategoryCard/>
                 <DiscountCard/>
                  <div className='flex flex-col gap-3'>

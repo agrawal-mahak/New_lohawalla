@@ -1,6 +1,7 @@
 import { useAllCategoriesQuery } from '../../Redux/Api/Category';
 import ImgCard from './ImgCard';
 import defaultImg from '../../assets/cement.png';
+import {Link} from 'react-router-dom'
 
 interface CardData {
   id: string;
@@ -26,7 +27,9 @@ const CategoryCard = () => {
             <ImgCard key={category.id} data={category}/>
           ))}
         </div>  
-        <h2 className='text-[#007185] font-inter text-md font-semibold mt-4'>See more</h2>    
+        <Link to=''>     
+            <h2 className='text-[#007185] font-inter text-md font-semibold mt-4'>See more</h2>  
+        </Link>  
       </div>
     </div>
   );

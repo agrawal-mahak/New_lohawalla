@@ -66,7 +66,7 @@ const ProductCard = ({
         <div className='md:w-[18.5rem] w-[18.5rem] h-full bg-white border border-[#ECF0F0] md:border md:border-[#ECF0F0] rounded-lg shadow-md shadow-gray-500/50'>
            <div>
                 <div className='flex justify-center'>
-                            {/* <Link   to={`/product/${_id}`}
+                            <Link to={`/singleProduct/${_id}`}
                                 state={{
                                      name,
                                     description,
@@ -75,7 +75,7 @@ const ProductCard = ({
                                      status,
                                     _id,
                                     productName
-                                }}> */}
+                                }}>
 
                        <img src={image} alt='rect' className='relative md:h-[14rem] h-[13.7rem] w-[17rem] py-3 
                         '/>
@@ -83,7 +83,7 @@ const ProductCard = ({
                                 <img src={shieldDone} alt="shield" className='md:h-[15.56px] md:w-[13.22px] w-[8.81px] h-[10.37px]'></img>
                                 <h1 className='font-inter text-[#047857] md:text-sm text-[10px] whitespace-nowrap'>Lohawalla Assured</h1>
                         </div> */}
-                       {/* </Link>  */}
+                            </Link> 
 
                     {/* <div className='bg-white cursor-pointer border-[#ECF0F0] rounded-bl-xl px-3  py-3 z-20 absolute  md:ml-[17rem] ml-[8.3rem]'>
                         <img src={shareIcon} className='h-[18px] w-[18px] md:h-[32px] md:w-[32px]' onClick={shareOnWhatsApp}></img>
@@ -94,21 +94,22 @@ const ProductCard = ({
                             <img src={heartIcon} alt='heart' className="h-3 w-3 md:h-5 md:w-5 absolute" />
                      </div> */}
                 </div>
+                
                 <div className='ml-2'>
                     <h1 className='font-inter text-[#111827] md:text-xl text-[12px] md:leadingng-4 my-1 overflow-hidden max-h-[1rem] md:max-h-[1.5rem] font-bold'> 
-                    {productName ? productName.split(' ').slice(0, window.innerWidth >= 768 ? 8 : 5).join(' ') : name ? name.split(' ').slice(0, window.innerWidth >= 768 ? 8 : 5).join(' ') : ''}
-                         
+                        {productName ? productName.split(' ').slice(0, window.innerWidth >= 768 ? 8 : 5).join(' ') : name ? name.split(' ').slice(0, window.innerWidth >= 768 ? 8 : 5).join(' ') : ''}   
                     </h1>
-                    <p className='font-inter text-[#111827] md:text-xl text-[12px] md:leadingng-4 my-1 overflow-hidden max-h-[1rem] md:max-h-[1.5rem] font-bold'>(300/Bag)</p>
+                    <p className='font-inter text-[#111827] md:text-xl text-[12xl] md:leading-4 my-1 overflow-hidden max-h-[1rem] md:max-h-[1.5rem] font-bold'>(300/Bag)</p>
+                   
                     <p className='font-bold font-inter text-[#475569] md:text-[16px] text-[16px] md:leading-6 leading-4 mt-4 md:max-h-[1.5rem]'>
                     {description ? 
                       description.substring(0, window.innerWidth >= 768 ? 32 : 25) : 
                       description ? description.substring(0, window.innerWidth >= 768 ? 80 : 50) : 'more..'}  
                     </p>
+
                     <p className='font-bold font-inter text-[#94A3B8] md:text-xs text-[12px] md:leading-6 leading-4'>
-                      {companyName ? "Company:" + companyName : ""}
-                        
-                      </p>
+                      {companyName ? "Company:" + companyName : ""}  
+                    </p>
                 </div>
                 {/* <p className='text-[#475569] text-[14px] font-bold md:text-[20px] my-1 ml-2'>₹{mrpPrice}</p> */}
                 <div className='flex flex-row md:justify-around justify-around my-1 items-center mt-6'>
@@ -122,7 +123,7 @@ const ProductCard = ({
 
                 {/* button */}
                <div className='flex justify-center '>
-                {/* <Link to={`/product/${_id}`}
+                <Link to={`/product/${_id}`}
                                 state={{
                                     name,
                                     description,
@@ -131,14 +132,14 @@ const ProductCard = ({
                                     status,
                                     _id,
                                     productName
-                                }}> */}
+                                }}>
                     <button 
                     // onClick={() => handleaddToCart(_id)}
                     className='bg-[#FEBD69] font-inter font-bold whitespace-nowrap md:mb-3 mb:-2 rounded-lg md:py-4 py-2 md:px-[3rem] px-2 my-2 md:text-sm text-[12px] text-[#0F172A]
                               hover:bg-white hover:text-[#0F172A] hover:border-2 hover:border-[#1E293B] hover:transition hover:duration-500'>  
                         Contact For Better Pricing      
                     </button>
-                {/* </Link> */}
+                </Link>
                </div>
             </div> 
         </div>
