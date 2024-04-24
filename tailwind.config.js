@@ -10,6 +10,7 @@ module.exports = {
         'open-sans' : ["Open Sans", 'sans-serif'],
         'poppins' :["Poppins", 'sans-serif'],
         'jockey-one': ['Jockey One', 'sans-serif'], // Added Jockey One font
+        'jacquard': ['"Jacquard 12 Charted"', 'system-ui', 'sans-serif'],
       },
     },
   },
