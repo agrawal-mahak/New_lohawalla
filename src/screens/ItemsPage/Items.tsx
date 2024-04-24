@@ -42,6 +42,7 @@ const Items = () => {
     const selectedCategories = Object.keys(checkboxes).filter(
       (key) => checkboxes[key]
     );
+    console.log(selectedCategories,"selctedcategories")
 
     // Update the category state
     setCombinedState({
@@ -61,6 +62,7 @@ const Items = () => {
       (key) => checkboxes[key]
     );
 
+    console.log(selectedCompanies);
     // Update the category state
     setCombinedState({
       ...combinedState,
@@ -131,14 +133,15 @@ const nextPage = () => {
         <div className=" w-[270px]    pl-[30px] flex flex-col gap-[0.6rem] border-r-[2px]">
           <Filters categorychange={handleCategoryChange} />
           <Companies companychange={handleCompanyChange} /> 
-    
-      </div>
+    </div>
 
         <div className="flex flex-col gap-[1rem]">
      
   <div className="w-full">
     {SearchProductsResponse &&
-      SearchProductsResponse.products.map((product: any, index: number) => (
+      SearchProductsResponse.products.map((product: any, index: number
+
+      ) => (
         <div key={index}>
           <ItemCard data={product} />
         </div>
