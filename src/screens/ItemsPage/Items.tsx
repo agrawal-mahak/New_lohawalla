@@ -133,7 +133,7 @@ const Items = () => {
       </div>
 
       <div className="h-[96px] flex justify-center items-center  ">
-        <div className="flex flex justify-center items-center border  gap-[19px]  h-[48px]">
+        <div className="flex justify-center items-center border  gap-[19px]  h-[48px]">
           <FaAngleLeft />
           <span>Previous</span>
           <span className="flex gap-[2.2rem]">1 2 3 4 ... 98</span>

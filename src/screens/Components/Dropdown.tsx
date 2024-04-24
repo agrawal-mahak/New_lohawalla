@@ -41,7 +41,7 @@ const Dropdown: React.FC = () => {
             placeholder='Search options...'
             value={searchQuery}
             onChange={handleSearchChange}
-            className=' rounded-md focus:outline-none w-[764px] ml-3'
+            className=' rounded-md focus:outline-none w-[45rem] ml-3'
         />
         <div className='bg-[#FEBD69] mr-0'>
         <IoSearchOutline  size={25} className='m-2'/>
