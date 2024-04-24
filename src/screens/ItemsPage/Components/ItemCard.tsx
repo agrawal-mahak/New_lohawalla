@@ -2,7 +2,7 @@ import item from "../../../assets/item.png"
 import { FaStar } from "react-icons/fa6";
 import { FaStarHalfStroke } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
- 
+
 interface ItemData {
   GSt: {
     type: string;
@@ -26,14 +26,13 @@ interface ItemData {
   productName: string;
   unit: string;
 }
- 
 const ItemCard: React.FC<{ data: ItemData }> = ({ data }) => {
   // console.log(data,"Hordt")
  
   return (
     <div className=' flex gap-[2rem] py-[18px] border-t border-b w-full '>
           <div>
-          <img src={data.images[0]} alt='item' className="w-[197px] h-[190px]" />
+          <img src={data.images[0] ? data.images[0] : "https://m.media-amazon.com/images/I/51MLqxTajeL._SX679_.jpg"} alt='item' className="w-[197px] h-[190px]" />
           </div>
        
          <div className='flex flex-col gap-[8px] '>

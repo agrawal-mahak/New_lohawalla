@@ -3,7 +3,10 @@ import logo from '../../assets/logo.png'
 import Dropdown from './Dropdown'
 import { Link } from 'react-router-dom'
 
+
 const Navbar = () => {
+  
+
   return (
      <div className='flex flex-row justify-around items-center bg-[#5097A4] p-2'>
         <div className='bg-[#5097A4]'>
