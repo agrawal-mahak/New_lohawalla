@@ -34,7 +34,7 @@ export const Filters: React.FC<FiltersProps> = ({ categorychange }) => {
     search: "",
     checkboxes: {} as { [key: string]: boolean },
   });
-  console.log(formData,"sahi to mera code")
+  // console.log(formData,"sahi to mera code")
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 

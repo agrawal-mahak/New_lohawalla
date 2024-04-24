@@ -11,24 +11,23 @@ type companiesProps = {
 };
 
 const Companies: React.FC<companiesProps> = ({companychange}) => {
-    const [dispalycount ,setDisplayCount] = useState<number>(5)
+    const [dispalycount ,setDisplayCount] = useState<number>(7)
   const { data: CompaniesResponse } = useCompaniesNameQuery(
     {},
     { refetchOnMountOrArgChange: true }
   );
 
-  console.log(CompaniesResponse, 'check');
+  // console.log(CompaniesResponse, 'check');
   const [form, setForm] = useState({
     search: '',
     checkboxes: {} as { [key: string]: boolean } 
   });
-  console.log(form,"mahak ka error");
+  // console.log(form,"mahak ka error");
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-    
-  };
+   const handleInputChange = ( e: React.ChangeEvent<HTMLInputElement>) =>{
+      const {name,value} = e.target
+        setForm ({ ...form , [name]: value})
+   }
 
   const handleCheckboxChange = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -55,8 +54,7 @@ const Companies: React.FC<companiesProps> = ({companychange}) => {
 
     const handleMoreClick = () => {
         setDisplayCount(prevCount => prevCount +5);
-    }   
-
+    }
   
   const companiesToDisplay = filteredCompanies.slice(0, dispalycount);
 
