@@ -37,12 +37,10 @@ const ItemCard: React.FC<{ data: ItemData }> = ({ data }) => {
        
          <div className='flex flex-col gap-[8px] '>
                <div className='font-[500] text-[18px] leading-[21px]'>{data.productName}</div>
-               <div className='font-[500] text-[14px] leading-[17px] flex  items-center gap-[9px] '>
+               {/* <div className='font-[500] text-[14px] leading-[17px] flex  items-center gap-[9px] '>
                 <div className='font-[500] text-[18px] leading-[21px] text-[#B12704] '>₹64,500 /Ton</div>
-
-                <del className="line-through text-[#5C5C77]">₹71,999</del>
                
-                Save ₹7,000 (13%)</div>
+                ₹71,999 Save ₹7,000 (13%)</div> */}
                <div className='text-[#565959] font-[400] text-[14px] leading-[16px] '>{data.description}</div>
                  <div className="flex text-center text-[#007185] items-center  ">
                <div className="flex  pr-[12px] font-[400] text-[14px] leading-[16px] text-[]"><FaStar className="text-yellow-600" /> <FaStar className="text-yellow-600" /> <FaStar className="text-yellow-600" /> <FaStar className="text-yellow-600" /> <FaStarHalfStroke className="text-yellow-600" />  

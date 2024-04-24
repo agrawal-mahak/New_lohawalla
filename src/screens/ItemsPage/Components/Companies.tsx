@@ -63,7 +63,7 @@ const Companies: React.FC<companiesProps> = ({companychange}) => {
     <div>
 
 <div className="flex flex-col gap-[0.6rem]">
-          <div className="font-[700] text-[14px] leading-[16px] ">Companies</div>
+          <div className="font-[700] text-[14px] leading-[16px] ">Companies </div>
 
            <div className='flex border items-center  bg-[#F8FAFC] mr-3 py-1 rounded-[7px]'>
               <IoSearch size={18} className='text-[#9C3AF] pl-[4px]' />
