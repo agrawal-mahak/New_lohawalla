@@ -1,11 +1,14 @@
 import React from 'react'
 import logo from '../../assets/logo.png'
 import Dropdown from './Dropdown'
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+  const navigate = useNavigate()
+
   return (
-     <div className='flex flex-row justify-around items-center bg-[#5097A4] p-2'>
-        <div className='bg-[#5097A4]'>
+     <div className='flex flex-row justify-around items-center bg-[#5097A4] p-2 '>
+        <div className='bg-[#5097A4]' onClick={() => navigate("/")}>
         <img src={logo} alt='logo'/>
         </div>
 

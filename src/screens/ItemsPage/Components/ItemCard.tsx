@@ -4,11 +4,31 @@ import { FaStar } from "react-icons/fa6";
 import { FaStarHalfStroke } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
 
+interface ItemData {
+  GSt: {
+    type: string;
+    value: number;
+  };
+  companyName: string;
+  description: string;
+  images: string[];
+  itemCode: string;
+  margin: {
+    cash: number;
+    online: number;
+  };
+  priceField: {
+    name: string;
+    value: number;
+    operation: string;
+    type: string;
+    position: number;
+  }[];
+  productName: string;
+  unit: string;
+}
 
-
-
-
-const ItemCard = ({ data }) => {
+const ItemCard: React.FC<{ data: ItemData }> = ({ data }) => {
   // console.log(data,"Hordt")
 
   return (
