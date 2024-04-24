@@ -7,8 +7,14 @@ import Footer from '../../common/Footer';
 import Header from '../Components/Header';
 import Navbar from '../Components/Navbar';
 import RelatedItem from './Components/RelatedItem';
+import { useLocation } from 'react-router-dom';
 
  const SingleProduct = () => {
+       const location = useLocation();
+       const props = location.state;
+
+       console.log(props)
+
   return (
     <>
       

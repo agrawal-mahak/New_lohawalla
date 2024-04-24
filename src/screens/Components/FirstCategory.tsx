@@ -46,4 +46,4 @@ const FirstCategory = () => {
   )
 }
  
-export default FirstCategoryv
+export default FirstCategory
