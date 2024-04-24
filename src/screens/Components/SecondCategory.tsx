@@ -12,7 +12,7 @@ const SecondCategory = () => {
 
    const name2 = CategoryProducts2?.[4]?.name;  
    const { data: CategoryProductsResponse2 } = useParticularCategory2Query(
-     name2 || ""
+     name2 || ""   
    );
    console.log(CategoryProductsResponse2,"categoryResponse");
 
