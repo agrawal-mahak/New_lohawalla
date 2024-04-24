@@ -16,7 +16,7 @@ import { Form } from "../../types/types";
 
 const Items = () => {
   const location = useLocation()
-  const cat = location.state.name;
+  const cat = location.state ? location.state.name : null;
   console.log(cat, "cat");
 
   const [searchFilters, { data: SearchProductsResponse }, isLoading, isError] =
@@ -81,7 +81,13 @@ const Items = () => {
     }
   }, [isError]);
 
-  // console.log(combinedState, "combinedstate");
+  useEffect(() => {
+       if(cat){
+          setCombinedState({...combinedState,category:cat})
+       }
+  },[cat])
+
+  console.log(combinedState, "combinedstate");
   // console.log(SearchProductsResponse, "SearchProductsResponse");
 
 const prevPage = () => {
