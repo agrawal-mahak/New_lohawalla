@@ -11,7 +11,7 @@ const SecondCategory = () => {
 
    const name2 = CategoryProducts2?.[2]?.name;  
    const { data: CategoryProductsResponse2 } = useParticularCategory2Query(
-     name2 || ""
+     name2 || ""   
    );
 
   return (

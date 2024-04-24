@@ -13,7 +13,7 @@ const CategoryCard = () => {
       <div className='flex flex-col gap-4'>
         <div className='flex gap-4 flex-wrap'>
             {data?.slice(0,4).map((category: CardData) => (   
-              <ImgCard key={category.id} data={category}/>
+              <ImgCard key={category.id} data={category}/>       
             ))}
         </div>      
       </div>

@@ -1,16 +1,16 @@
 import { IoIosArrowDown } from "react-icons/io";
 import { BsDot } from "react-icons/bs";
-
+ 
 const Description = () => {
   return (
     <div className="gap-[24px] w-[1200px] mt-[20px] mb-[40px]">
        
         <div className="font-[500] text-[16px] leading-[24px w-[131px] h-[40px] flex items-center justify-center gap-[3px] ">  
               <IoIosArrowDown />
-           <div className="text-[#D58800] underline">Description </div> 
+           <div className="text-[#D58800] underline">Description </div>
             </div>
-
-
+ 
+ 
            <div className=" flex flex-col gap-[10px] px-[5px] ">
            <div className="border-b-[2px] pb-[6px] px-[5px]">
            <div className="font-[500] text-[19px] leading-[21px]">
@@ -34,7 +34,7 @@ const Description = () => {
                  
                   </div>
               </div>
-
+ 
               <div className="border-b-[2px] pb-[6px] px-[5px]">
               <div className="font-[500] text-[19px] leading-[21px]">
                   Category description
@@ -46,7 +46,7 @@ const Description = () => {
                  
                   </div>
               </div>
-
+ 
               <div className="border-b-[2px] pb-[6px] px-[5px]">
               <div className="font-[500] text-[19px] leading-[21px]">
                   Comapny Product description
@@ -58,14 +58,13 @@ const Description = () => {
                  
                   </div>
               </div>
-
-
+ 
+ 
            </div>
-
-
+ 
+ 
     </div>
   )
 }
-
+ 
 export  default Description
-

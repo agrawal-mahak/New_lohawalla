@@ -123,7 +123,7 @@ const ProductCard = ({
 
                 {/* button */}
                <div className='flex justify-center '>
-                <Link to={`/product/${_id}`}
+                <Link to={`/singleProduct/${_id}`}
                                 state={{
                                     name,
                                     description,
