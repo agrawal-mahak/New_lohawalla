@@ -22,8 +22,11 @@ const Home = () => {
 
   return (
     <div className='bg-[#E2E8F0]'>   
-        <Navbar/>  
+      <div>
+      <Navbar/>  
         <Header/>
+      </div>
+        
         <div className='gap-6 mx-auto w-[80rem]'>
          <Carousel slides={slides}/>
         </div>

@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../../assets/logo.png'
 import Dropdown from './Dropdown'
 import { Link } from 'react-router-dom'
+import { SearchResult } from '../../types/types'
+import { useSearchAllProductsMutation } from '../../Redux/Api/priceAPI'
 
 
 const Navbar = () => {
-  
+ 
 
   return (
      <div className='flex flex-row justify-around items-center bg-[#5097A4] p-2 '>
