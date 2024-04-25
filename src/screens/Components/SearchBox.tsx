@@ -59,7 +59,7 @@ const SearchBox = (props: SearchBoxProps) => {
        
 
             {/* // on clicking/typing */}
-            <div className="fixed  top-[54px] left-[19rem] z-50 bg-white w-[736px] h-[264px]  flex flex-col gap-[39px] bg-white border rounded-[6px] px-[12px] py-[8px] ">
+            <div className="fixed z-50  top-[78px] left-[19rem]  bg-white w-[736px] h-[264px]  flex flex-col gap-[39px]  border rounded-[6px] px-[12px] py-[8px] ">
             <div className="w-[716px] flex flex-col gap-[16px]">
                 {/* <div className="flex flex-row justify-evenly items-center  border-b border-gray-300 w-full h-[55px] ">
                     <span
