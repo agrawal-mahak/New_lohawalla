@@ -8,8 +8,8 @@ const Header = () => {
   const { data, isLoading } = useAllCategoriesQuery("");
  
   return (
-    <div className="bg-[#FFFFFF] flex p-3 items-center gap-6 font-inter text-[#252F3D] font-semibold text-sm top-0">
-      <div className="ml-12 flex  items-center gap-6 font-inter text-[#252F3D] font-semibold text-sm ">
+    <div className="bg-[#FFFFFF] flex p-3 items-center gap-6 font-inter text-[#252F3D] font-semibold text-sm top-[3.7rem] sticky z-30">
+      <div className="ml-12 flex  items-center gap-6 font-inter text-[#252F3D] font-semibold text-sm cursor-pointer">
         <RxHamburgerMenu />
         {data?.slice(10, 16).map((item: any, index: any) => (
           <p key={index} onClick={() => navigate("/items", {state : { name : item.name}})}>

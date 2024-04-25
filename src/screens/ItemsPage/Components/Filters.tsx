@@ -80,7 +80,7 @@ const categoriesToDisplay = filteredCategories.slice(0, dispalycount);
 
   return (
     <div>
-      <div className="  flex flex-col gap-[0.6rem] ">
+      <div className="  flex flex-col gap-[0.6rem]">
         <div className="flex flex-col gap-[0.6rem]  mt-[16px]">
           <div className="font-[700] text-[14px] leading-[16px] ">Category</div>
 
@@ -121,7 +121,7 @@ const categoriesToDisplay = filteredCategories.slice(0, dispalycount);
 
           <div className="flex items-center gap-[3px]" onClick={handleMoreClick}>
             <IoIosArrowDown />
-            <div className="text-[#007185] font-[500] text-[14px] leading-[16px]">
+            <div className="text-[#007185] font-[500] text-[14px] leading-[16px] cursor-pointer">
               See more 
             </div>
           </div>
@@ -129,17 +129,17 @@ const categoriesToDisplay = filteredCategories.slice(0, dispalycount);
 
         
 
-        <div className="flex gap-[6px]">
-          <div className="w-[65px] h-[31px] border rounded-[4px] flex justify-center items-center ">
+        {/* <div className="flex gap-[6px]">
+          <div className="w-[65px] h-[31px] border rounded-[4px] flex justify-center items-center cursor-pointer">
             ₹Min
           </div>
-          <div className="w-[65px] h-[31px] border rounded-[4px] flex justify-center items-center ">
+          <div className="w-[65px] h-[31px] border rounded-[4px] flex justify-center items-center cursor-pointer">
             ₹Max
           </div>
-          <div className="w-[41px] h-[30px] border rounded-[8px] flex justify-center items-center ">
+          <div className="w-[41px] h-[30px] border rounded-[8px] flex justify-center items-center cursor-pointer ">
             Go
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

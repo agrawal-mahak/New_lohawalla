@@ -27,7 +27,7 @@ const CategoryCard = () => {
             <ImgCard key={category.id} data={category}/>
           ))}
         </div>  
-        <Link to=''>     
+        <Link to='/items'>     
             <h2 className='text-[#007185] font-inter text-md font-semibold mt-4'>See more</h2>  
         </Link>  
       </div>
