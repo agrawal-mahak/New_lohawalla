@@ -34,7 +34,9 @@ import { useSingleProductQuery } from '../../Redux/Api/ProductAPI';
          image={image}
          data={data ? data :ProductData }
          />
-        <ProductDetails />
+        <ProductDetails 
+          data={data}
+        />
         </div>
 
      <ItemData 

@@ -1,6 +1,8 @@
 import React from "react";
 
-const ProductDetails = () => {
+const ProductDetails = ({data}) => {
+  console.log(data,"the data")
+
   return (
     <div>
       <div className="font-[700] text-[18px] leading-[27px]">

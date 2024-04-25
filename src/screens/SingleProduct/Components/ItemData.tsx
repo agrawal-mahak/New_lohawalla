@@ -27,6 +27,7 @@ export interface ItemDataProps {
 
 const ItemData: React.FC<ItemDataProps> = ({ productName, name, mrpPrice, status, description, image, _id, data, isLoading }) => {
      console.log(data,"productname")
+     console.log(description,name,productName,mrpPrice,status,image,_id,"all of the above")
 
      const getProductName = (productName?: string, dataProductName?: string): string | undefined => {
       return productName ?? dataProductName;
