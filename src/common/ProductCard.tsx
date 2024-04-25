@@ -9,6 +9,8 @@ import cement from '../../src/assets/cardImg.png';
 // import "react-toastify/dist/ReactToastify.css";
 import { Link, useNavigate } from "react-router-dom";
 import heartIcon from "../../../assets/Heart.png";
+import { GoStarFill } from "react-icons/go";
+
 
 type ImageUrl = string;
 type MobileCardProps = {
@@ -77,8 +79,7 @@ const ProductCard = ({
                                     productName
                                 }}>
 
-                       <img src={image} alt='rect' className='relative md:h-[14rem] h-[13.7rem] w-[17rem] py-3 
-                        '/>
+                       <img src={image} alt='rect' className='relative md:h-[14rem] h-[13.7rem] w-[17rem] py-1'/>
                         {/* <div className='bg-[#DCFCE7] flex flex-row gap-2 z-20 absolute -mt-[13.9rem] md:ml-2 ml-1 px-2 py-1 rounded-xl items-center'>
                                 <img src={shieldDone} alt="shield" className='md:h-[15.56px] md:w-[13.22px] w-[8.81px] h-[10.37px]'></img>
                                 <h1 className='font-inter text-[#047857] md:text-sm text-[10px] whitespace-nowrap'>Lohawalla Assured</h1>
@@ -115,7 +116,8 @@ const ProductCard = ({
                 <div className='flex flex-row md:justify-around justify-around my-1 items-center mt-6'>
                     <div className='bg-[#2563EB] rounded-md md:px-4 px-2 md:py-1 flex flex-row items-center gap-2 whitespace-nowrap'>
                         <p className='text-[#FFFFFF] font-roboto font-semibold text-[12px] md:text-[12px] items-center'>3.7</p>
-                        <img src={star} className='md:h-4 md:w-4 h-[10px] w-[10px] items-center -mt-1'/>
+                        {/* <img src={star} className='md:h-4 md:w-4 h-[10px] w-[10px] items-center -mt-1'/> */}
+                        <GoStarFill className='text-white' size={13} />
                     </div>
                     <p className='font-inter font-semibold  text-[12px] text-semibold text-[#94A3B8] whitespace-nowrap'>(474) reviews</p>
                     <div className='hidden md:block px-2 py-1 bg-[#65A30D] rounded-lg text-[#F7FEE7] whitespace-nowrap font-inter font-bold text-[12px]'>12% discount</div>
