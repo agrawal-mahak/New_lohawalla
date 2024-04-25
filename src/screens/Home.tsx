@@ -16,7 +16,8 @@ import Comp2 from './extra/Comp2'
 import SecondCategory from './Components/SecondCategory'
 import CategorySecond from './Components/CategorySecond'
 import Comp3 from './extra/Comp3'
- 
+import { Link } from 'react-router-dom'
+
 const Home = () => {
   const slides = [<Comp1/>, <Comp2/>, <Comp3/>];
  
@@ -35,7 +36,7 @@ const Home = () => {
                  <div className='flex flex-col gap-3'>
                     <ShopWithUs/>
                     <div>
-                        <img src={HomeImg} alt='home'/>
+                         <Link to='/items'><img src={HomeImg} alt='home'/></Link>
                     </div>
                  </div>
  

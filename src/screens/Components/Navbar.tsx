@@ -16,15 +16,17 @@ const Navbar = () => {
         </div>
 
         <div className='bg-white'>
-            <Dropdown/>
+            <Dropdown/>             
         </div>
 
-        <button 
-                    // onClick={() => handleaddToCart(_id)}
-                    className='bg-[#FEBD69] font-inter font-bold whitespace-nowrap md:mb-3 mb:-2 rounded-lg md:py-4 py-2 md:px-[3rem] px-2 my-2 md:text-sm text-[12px] text-[#0F172A]
-                              hover:bg-white hover:text-[#0F172A] hover:border-2 hover:border-[#1E293B] hover:transition hover:duration-500'>  
-                        Contact For Better Pricing      
-                    </button>
+         <Link to='/Contact'>
+         <button       
+             // onClick={() => handleaddToCart(_id)}
+                className='bg-[#FEBD69] font-inter font-bold whitespace-nowrap md:mb-3 mb:-2 rounded-lg md:py-4 py-2 md:px-[3rem] px-2 my-2 md:text-sm text-[12px] text-[#0F172A]
+                            hover:bg-white hover:text-[#0F172A] hover:border-2 hover:border-[#1E293B] hover:transition hover:duration-500'>  
+               Contact for better Pricing 
+         </button>
+         </Link>    
      </div>
   )
 }
