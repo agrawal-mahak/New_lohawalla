@@ -122,7 +122,7 @@ const Dropdown: React.FC = () => {
         </div>
       
         {showSearchBox && (
-        <div id="search-box  " className=''>
+        <div id="search-box" className=''>
           <SearchBox searchResults={searchResults} />
         </div>
       )}
