@@ -21,9 +21,13 @@ const Home = () => {
   const slides = [<Comp1/>, <Comp2/>, <Comp3/>];
  
   return (
-    <div className='bg-[#E2E8F0] relative z-30'>  
-        <Navbar/>  
+    <div className='bg-[#E2E8F0] '>  
+       
+       <Navbar/> 
+        
         <Header/>
+       
+        
         <div className='gap-6 mx-auto w-[80rem]'>
          <Carousel slides={slides}/> 
         </div>

@@ -98,7 +98,7 @@ const Dropdown: React.FC = () => {
   console.log(searchResults, "koo");
 
   return (
-    <div className='  flex items-center h-[40px] '>
+    <div className=' relative z-30 flex items-center h-[40px] '>
         <select onChange={(e) => handleSelectOption(e.target.value)} value={selectedOption || ''} className='focus:outline-none bg-[#F3F3F3] h-[40px] w-[52px] p-1'>
         <option value={specialOption.value} className='bg-[#F3F3F3] m-2'>{specialOption.label}</option>
         
@@ -118,13 +118,15 @@ const Dropdown: React.FC = () => {
         <div className='bg-[#FEBD69] mr-0'>
           <IoSearchOutline  size={25} className='m-2'/>
 
+        
+        </div>
+      
         {showSearchBox && (
-        <div id="search-box">
+        <div id="search-box  " className=''>
           <SearchBox searchResults={searchResults} />
         </div>
       )}
-        </div>
-     
+
     </div>
   );
 };
