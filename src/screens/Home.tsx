@@ -25,7 +25,7 @@ const Home = () => {
         <Navbar/>  
         <Header/>
         <div className='gap-6 mx-auto w-[80rem]'>
-         <Carousel slides={slides}/>
+         <Carousel slides={slides}/> 
         </div>
          
         <div className='bg-[#E2E8F0]'>

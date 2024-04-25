@@ -45,7 +45,7 @@ const Dropdown: React.FC = () => {
             className=' rounded-md focus:outline-none w-[45rem] ml-3'
         />
         <div className='bg-[#FEBD69] mr-0'>
-        <IoSearchOutline  size={25} className='m-2'/>
+          <IoSearchOutline  size={25} className='m-2'/>
 
         </div>
      
