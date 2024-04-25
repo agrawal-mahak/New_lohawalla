@@ -8,7 +8,7 @@ const Navbar = () => {
   
 
   return (
-     <div className='flex flex-row justify-around items-center bg-[#5097A4] p-2'>
+     <div className='flex flex-row justify-around items-center bg-[#5097A4] p-2 '>
         <div className='bg-[#5097A4]'>
         <Link to='/'> <img src={logo} alt='logo'/></Link>
         </div>

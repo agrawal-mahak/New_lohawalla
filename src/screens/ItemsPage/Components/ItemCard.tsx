@@ -2,6 +2,7 @@ import item from "../../../assets/item.png"
 import { FaStar } from "react-icons/fa6";
 import { FaStarHalfStroke } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 interface ItemData {
   GSt: {
@@ -25,13 +26,17 @@ interface ItemData {
   }[];
   productName: string;
   unit: string;
+  _id:string;
 }
 const ItemCard: React.FC<{ data: ItemData }> = ({ data }) => {
-  // console.log(data,"Hordt")
- 
+  // console.log(data,"Hordt") 
+    
+  
+    const navigate = useNavigate();
+
   return (
-    <div className=' flex gap-[2rem] py-[18px] border-t border-b w-full '>
-          <div>
+    <div className=' flex gap-[2rem] py-[15px] border-t border-b w-full '>
+          <div onClick={() => navigate(`/singleproduct/${data._id}`, {state : { data}})} >
           <img src={data.images[0] ? data.images[0] : "https://m.media-amazon.com/images/I/51MLqxTajeL._SX679_.jpg"} alt='item' className="w-[197px] h-[190px]" />
           </div>
        

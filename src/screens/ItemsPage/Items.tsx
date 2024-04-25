@@ -22,6 +22,8 @@ const Items = () => {
   const [searchFilters, { data: SearchProductsResponse }, isLoading, isError] =
     useSearchFiltersMutation();
 
+    
+
   const [combinedState, setCombinedState] = useState<CombinedState>({
     search: "", rating: null, company: null, category: null, sort: "", limit: 12, page: 1,
   });
@@ -37,12 +39,12 @@ const Items = () => {
     checkboxes: { [key: string]: boolean };
   }) => {
     const { checkboxes } = data;
-    console.log(data, "data");
+    // console.log(data, "data");
 
     const selectedCategories = Object.keys(checkboxes).filter(
       (key) => checkboxes[key]
     );
-    console.log(selectedCategories,"selctedcategories")
+    // console.log(selectedCategories,"selctedcategories")
 
     // Update the category state
     setCombinedState({
@@ -56,13 +58,13 @@ const Items = () => {
     checkboxes: { [key: string]: boolean };
   }) => {
     const { checkboxes } = data;
-    console.log(data, "data");
+    // console.log(data, "data");
 
     const selectedCompanies = Object.keys(checkboxes).filter(
       (key) => checkboxes[key]
     );
 
-    console.log(selectedCompanies);
+    // console.log(selectedCompanies);
     // Update the category state
     setCombinedState({
       ...combinedState,
@@ -74,6 +76,7 @@ const Items = () => {
 
   useEffect(() => {
     searchFilters({ combinedState });
+    
   }, [combinedState, searchFilters]);
   
 
@@ -86,12 +89,14 @@ const Items = () => {
   useEffect(() => {
        if(cat){
           setCombinedState({...combinedState,category:cat})
+            
        }
   },[cat])
 
-  console.log(combinedState, "combinedstate");
+  // console.log(combinedState, "combinedstate");
   // console.log(SearchProductsResponse, "SearchProductsResponse");
-
+  console.log(SearchProductsResponse,"search") 
+  
 const prevPage = () => {
    if (currentPage >1){
       setCurrentPage(currentPage -1);
@@ -144,6 +149,7 @@ const nextPage = () => {
       ) => (
         <div key={index}>
           <ItemCard data={product} />
+
         </div>
       ))}
   </div>
