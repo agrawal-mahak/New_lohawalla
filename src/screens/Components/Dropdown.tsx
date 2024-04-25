@@ -116,7 +116,7 @@ const Dropdown: React.FC = () => {
          
         </div>
         <div className='bg-[#FEBD69] mr-0'>
-        <IoSearchOutline  size={25} className='m-2'/>
+          <IoSearchOutline  size={25} className='m-2'/>
 
         
         </div>

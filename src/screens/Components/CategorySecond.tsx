@@ -22,7 +22,7 @@ const CategoryCard = () => {
     <div className='bg-[#ffffff] max-w-[23rem] h-[23rem] p-6'> 
       <h1 className='font-inter font-bold text-md pb-2'>Build your home With us</h1>
       <div className='flex flex-col gap-4'>  
-        <div className='flex gap-4 flex-wrap'>
+        <div className='flex gap-4 flex-wrap cursor-pointer'>
           {data?.slice(4,8).map((category: CardData) => (   
             <ImgCard key={category.id} data={category}/>
           ))}
