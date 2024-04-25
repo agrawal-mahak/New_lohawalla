@@ -109,7 +109,7 @@ const Companies: React.FC<companiesProps> = ({companychange}) => {
 
           <div className="flex items-center gap-[3px]" onClick={handleMoreClick} >
             <IoIosArrowDown />
-            <div className="text-[#007185] font-[500] text-[14px] leading-[16px]" >
+            <div className="text-[#007185] font-[500] text-[14px] leading-[16px] cursor-pointer" >
               See More
             </div>
           </div>

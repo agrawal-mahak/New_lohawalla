@@ -108,8 +108,9 @@ const Comp2 = () => {
  
 
      <div
-      className="flex relative overflow-hidden sm:h-[18rem]  md:h-[33rem]    md:gap-[7rem] lg:gap-[8rem] xl:gap-[1rem]"
-      style={{ background: "linear-gradient(180deg, #F5F9FC 80%, white )" }}
+      className="flex relative overflow-hidden sm:h-[18rem]  md:h-[33rem]    md:gap-[7rem] lg:gap-[8rem] xl:gap-[1rem]
+      bg-gradient-to-br from-gray-200 via-gray-300 to-gray-200"
+      // style={{ background: "linear-gradient(180deg, #F5F9FC 80%, white )" }}
     >
       <div className="flex flex-col  ml-[0.7rem] my-[1.365rem] md:ml-[2.1rem] md:my-[2.365rem] lg:mx-[5.5rem] lg:my-[5.365rem] gap-[0.36rem]  md:gap-[2rem] pt-[2rem] ">
       <div className="font-[400]  font-bebas-neue text-xl sm:text-[3rem] md:text-[6rem] lg:text-[4rem] leading-[3.6rem]">

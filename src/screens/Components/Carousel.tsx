@@ -21,7 +21,7 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
       {slides.map((slide:any, index:any) => (
         <div
           key={index}
-          className={`absolute top-0 left-0 w-full h-full transition-transform transform ${
+          className={`absolute top-0 left-0 w-full h-full transition-transform transform duration-500 ${
             index === currentSlide ? 'opacity-100' : 'opacity-0'
           } ${index === currentSlide ? '' : '-translate-x-full'}`}
         >

@@ -28,7 +28,7 @@ const Dropdown: React.FC = () => {
   const filteredOptions = options.filter(option =>
     option.label.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
+      
   return (
     <div className='  flex items-center h-[40px] '>
         <select onChange={(e) => handleSelectOption(e.target.value)} value={selectedOption || ''} className='focus:outline-none bg-[#F3F3F3] h-[40px] w-[52px] p-1'>

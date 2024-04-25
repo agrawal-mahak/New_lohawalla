@@ -1,16 +1,3 @@
-// import React from 'react'
-
-// const Comp3 = () => {
-//   return (
-//     <div>Comp3</div>
-//   )
-// }
-
-// export default Comp3
-
-
-
-
 import { FaStar, FaRegStar } from "react-icons/fa";
 import mobilebar from "../../../../assets/1stimage/mobilebar.png";
 import circle from "../../../../assets/1stimage/circle.png";

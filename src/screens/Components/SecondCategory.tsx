@@ -18,13 +18,13 @@ const SecondCategory = () => {
 
   return (
     <div className='bg-[#FFFFFF] w-full mt-10 py-5'>
-            <div className='flex justify-between items-center p-3 mx-16'>
+            <div className='flex justify-between items-center p-3 mx-24'>
                 <h1 className='text-[#1E293B] font-inter text-2xl font-semibold'>
                     {CategoryProductsResponse2?.product[1].name}
                 </h1>
                 <div  className='cursor-pointer' onClick={() => navigate("/items", {state: { name: CategoryProductsResponse2?.product[1].cname}})}  > 
                 <span className='font-inter font-semibold text-[1rem] text-[#5097A4]'>
-                        Shop of collection →
+                      Shop of collection →
                 </span>
               </div>
             </div>
