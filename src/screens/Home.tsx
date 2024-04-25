@@ -21,7 +21,7 @@ const Home = () => {
   const slides = [<Comp1/>, <Comp2/>, <Comp3/>];
 
   return (
-    <div className='bg-[#E2E8F0]'>   
+    <div className='bg-[#E2E8F0] relative z-30'>   
         <Navbar/>  
         <Header/>
         <div className='gap-6 mx-auto w-[80rem]'>
