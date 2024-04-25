@@ -16,12 +16,12 @@ import Comp2 from './extra/Comp2'
 import SecondCategory from './Components/SecondCategory'
 import CategorySecond from './Components/CategorySecond'
 import Comp3 from './extra/Comp3'
-
+ 
 const Home = () => {
   const slides = [<Comp1/>, <Comp2/>, <Comp3/>];
-
+ 
   return (
-    <div className='bg-[#E2E8F0] relative z-30'>   
+    <div className='bg-[#E2E8F0] relative z-30'>  
         <Navbar/>  
         <Header/>
         <div className='gap-6 mx-auto w-[80rem]'>
@@ -38,7 +38,7 @@ const Home = () => {
                         <img src={HomeImg} alt='home'/>
                     </div>
                  </div>
-
+ 
                  <div className='flex gap-6'>
                      <div>
                          <img src={HomeVideo} alt='video' className='h-[23rem] relative z-0'/>
@@ -46,20 +46,20 @@ const Home = () => {
                      </div>
                      <CategorySecond/>
                  </div>
-                
+               
             </div>
-
+ 
             <div>
                 <FirstCategory/>
                 <SecondCategory/>
            </div>
         </div>
-
+ 
         <Footer/>
          
-
+ 
     </div>
   )
 }
-
+ 
 export default Home

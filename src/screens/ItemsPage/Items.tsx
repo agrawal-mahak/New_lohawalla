@@ -13,6 +13,7 @@ import Companies from "./Components/Companies";
 import { useSearchFiltersMutation } from "../../Redux/Api/ProductAPI";
 import { CombinedState } from "../../types/api-types";
 import { Form } from "../../types/types";
+import ProductCard from "../../common/ProductCard";
 
 const Items = () => {
   const location = useLocation()
@@ -33,6 +34,7 @@ const Items = () => {
   const [company, setCompany] = useState<Form | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [searchresult, setSearchResult] = useState<any>();
 
   const handleCategoryChange = (data: {
     search: string;                      
@@ -51,6 +53,8 @@ const Items = () => {
       ...combinedState,
       category: selectedCategories.length > 0 ? selectedCategories : null,
     });
+    setSearchResult(null);
+      console.log(searchresult,"dsearch");
   };
 
  const handleCompanyChange = (data: {
@@ -70,6 +74,7 @@ const Items = () => {
       ...combinedState,
       company: selectedCompanies.length > 0 ? selectedCompanies : null,
     });
+    setSearchResult(null);
   };
 
   const [prevCombinedState, setPrevCombinedState] = useState<CombinedState | null>(null);
@@ -114,6 +119,20 @@ const nextPage = () => {
   }
 };
 
+
+useEffect(() => {
+  if (location.state?.results) {
+    setSearchResult(location.state.results);
+    console.log(location.state.results, "searchresults");
+  }
+}, [location.state]);
+
+
+
+useEffect(() => {
+  console.log(searchresult, "dsearch");
+}, [searchresult]);
+
 // Handle company change
  
   return (
@@ -142,17 +161,28 @@ const nextPage = () => {
 
         <div className="flex flex-col gap-[1rem]">
      
-  <div className="w-full">
-    {SearchProductsResponse &&
-      SearchProductsResponse.products.map((product: any, index: number
+        <div className="w-full">
+  {searchresult ? (
+    searchresult.product?.slice(0, 9).map((i: any) => (
+      <ItemCard
+        data={{
+          companyName: i.companyName,
+          id: i.id,
+          images: i.images,
+          name: i.name,
+          type: i.type,
+        }}
+      />
+    ))
+  ) : (
+    SearchProductsResponse?.products?.length > 0 ? (
+      SearchProductsResponse.products.map((product: any) => (
+        <ItemCard data={product} />
+      ))
+    ) : null
+  )}
+</div>
 
-      ) => (
-        <div key={index}>
-          <ItemCard data={product} />
-
-        </div>
-      ))}
-  </div>
 
           <div>
             <RelatedSearch />
