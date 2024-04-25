@@ -12,12 +12,12 @@ import { useSingleProductQuery } from '../../Redux/Api/ProductAPI';
 
  const SingleProduct = () => {
   const location = useLocation();
-  const { productName, name, mrpPrice, status, description, image, _id} = location.state ?? {};
+  const { productName, name, mrpPrice, status, description, image, _id,data} = location.state ?? {};
   
   console.log("Received State:", location.state); 
   console.log(_id, 'id');
 
-  const { data, isLoading } = useSingleProductQuery(_id);     
+  const { data:ProductData, isLoading } = useSingleProductQuery(_id);     
 
   // console.log(productName, 'pd');
   console.log(data, "name");
@@ -30,7 +30,10 @@ import { useSingleProductQuery } from '../../Redux/Api/ProductAPI';
       <RelatedItem />
           <div className=' flex justify-between px-[27px]'>
           <div className='flex flex-col justify-between'>
-        <Imagesection image={image}/>
+        <Imagesection
+         image={image}
+         data={data ? data :ProductData }
+         />
         <ProductDetails />
         </div>
 
@@ -42,7 +45,7 @@ import { useSingleProductQuery } from '../../Redux/Api/ProductAPI';
         description={description}
         image={image}
         _id={_id}
-        data={data}
+        data={data ? data :ProductData }
         isLoading={isLoading}/>
      </div>
 

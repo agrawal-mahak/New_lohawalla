@@ -6,7 +6,7 @@ const Description = () => {
     <div className="gap-[24px] w-[1200px] mt-[20px] mb-[40px]">
        
         <div className="font-[500] text-[16px] leading-[24px w-[131px] h-[40px] flex items-center justify-center gap-[3px] ">  
-              <IoIosArrowDown />
+             
            <div className="text-[#D58800] underline">Description </div>
             </div>
  
@@ -59,7 +59,8 @@ const Description = () => {
                   </div>
               </div>
  
- 
+              <IoIosArrowDown />
+
            </div>
  
  
