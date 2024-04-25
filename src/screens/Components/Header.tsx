@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";
 import { useAllCategoriesQuery } from "../../Redux/Api/Category";
+import { useSearchAllProductsMutation } from "../../Redux/Api/priceAPI";
+import { SearchResult } from "../../types/types";
  
 const Header = () => {
   const navigate = useNavigate();
   const { data, isLoading } = useAllCategoriesQuery("");
+
  
   return (
     <div className="bg-[#FFFFFF] flex p-3 items-center gap-6 font-inter text-[#252F3D] font-semibold text-sm top-[4.9rem] sticky z-30">
