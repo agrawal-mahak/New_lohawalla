@@ -17,16 +17,16 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative z-20">
       {slides.map((slide:any, index:any) => (
         <div
           key={index}
-          className={`absolute top-0 left-0 w-full h-full transition-transform transform ${
+          className={`absolute top-0 left-0 w-full h-full transition-transform transform duration-500 ${
             index === currentSlide ? 'opacity-100' : 'opacity-0'
           } ${index === currentSlide ? '' : '-translate-x-full'}`}
         >
           {slide}
-        </div>
+        </div>   
       ))}
       <button
           className="absolute mt-[14rem] left-0 transform -translate-y-1/2  px-5 py-20 rounded-md text-white bg-gradient-to-r from-rgba-80-151-164-24 to-rgba-230-235-242-24 h-screen"

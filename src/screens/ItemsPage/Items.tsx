@@ -37,14 +37,14 @@ const Items = () => {
   const [searchresult, setSearchResult] = useState<any>();
 
   const handleCategoryChange = (data: {
-    search: string;
-    checkboxes: { [key: string]: boolean };
+    search: string;                      
+    checkboxes: { [key: string]: boolean };    
   }) => {
     const { checkboxes } = data;
     // console.log(data, "data");
 
     const selectedCategories = Object.keys(checkboxes).filter(
-      (key) => checkboxes[key]
+      (key) => checkboxes[key]    
     );
     // console.log(selectedCategories,"selctedcategories")
 
