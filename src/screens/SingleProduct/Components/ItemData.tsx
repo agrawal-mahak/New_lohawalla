@@ -24,9 +24,12 @@ export interface ItemDataProps {
   isLoading?: boolean;
 }
 
+  
+
 
 const ItemData: React.FC<ItemDataProps> = ({ productName, name, mrpPrice, status, description, image, _id, data, isLoading }) => {
      console.log(data,"productname")
+     console.log(description,name,productName,mrpPrice,status,image,_id,"all of the above")
 
      const getProductName = (productName?: string, dataProductName?: string): string | undefined => {
       return productName ?? dataProductName;
@@ -42,7 +45,8 @@ const ItemData: React.FC<ItemDataProps> = ({ productName, name, mrpPrice, status
           </div>
           <div className="flex justify-between ">
             <div className="font-[500] text-[30px] leading-[36px]">
-            { name ? name : data?.productName}
+            {name ? name : (data ? (data.productName ? data.productName : data.name) : "")}
+
             </div>
 
             <div className="w-[163px] h-[40px] border rounded-[4px] flex justify-center items-center bg-[#FEBD69] font-[700] text-[16px] leading-[20px] ">

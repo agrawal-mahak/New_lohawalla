@@ -124,6 +124,7 @@ useEffect(() => {
   if (location.state?.results) {
     setSearchResult(location.state.results);
     console.log(location.state.results, "searchresults");
+    
   }
 }, [location.state]);
 
@@ -139,7 +140,12 @@ useEffect(() => {
     <div>
       <Navbar />
       <Header />
-      <div className="flex justify-between px-[18px] py-[12px] border-b shadow-lg">
+
+      {/* <div className="border border-black w-full h-[4rem] ">
+                   
+      </div> */}
+
+      <div className="flex justify-between px-[18px] py-[12px] border-b shadow-lg sticky z-30 top-[8rem]  bg-white">
         <span>1-16 of over 2,000 results for TMT</span>
         <div className="bg-slate-200 flex justify-center gap-[7px] items-center shadow-lg border rounded-lg w-[130px] h-[34px]">
           <select className="bg-slate-200 border rounded-lg h-full w-full shadow-md">
@@ -153,15 +159,15 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className=" flex  h-full gap-[2rem] px-[1.67rem]">
-        <div className=" w-[270px]    pl-[30px] flex flex-col gap-[0.6rem] border-r-[2px]">
+      <div className=" flex  h-full gap-[2rem] px-[1.67rem] mt-[1.3rem] ">
+        <div className=" w-[270px]    pl-[30px] flex flex-col gap-[0.6rem] border-r-[2px] sticky top-[14rem]">
           <Filters categorychange={handleCategoryChange} />
           <Companies companychange={handleCompanyChange} /> 
     </div>
 
         <div className="flex flex-col gap-[1rem]">
      
-        <div className="w-full">
+        <div className="w-full ">
   {searchresult ? (
     searchresult.product?.slice(0, 9).map((i: any) => (
       <ItemCard
@@ -191,7 +197,7 @@ useEffect(() => {
       </div>
 
       <div className="h-[96px] flex justify-center items-center  ">
-        <div className="flex flex justify-center items-center border  gap-[19px]  h-[48px]" >
+        <div className="flex  justify-center items-center border  gap-[19px]  h-[48px]" >
               <div className="flex items-center gap-[1rem]"  onClick={prevPage}>
             <button
                className="border border-[#BCBCBC] h-11 w-11 flex justify-center items-center font-bold text-sm 
@@ -211,7 +217,8 @@ useEffect(() => {
           </span>
 
           <span className="flex gap-[2.2rem]"> 
-            {currentPage + 1}
+            {currentPage + 1}  
+            
           </span>
 
             <div className="flex items-center gap-[1rem]" onClick={nextPage}>

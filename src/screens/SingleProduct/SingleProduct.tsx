@@ -22,6 +22,8 @@ import { useSingleProductQuery } from '../../Redux/Api/ProductAPI';
   // console.log(productName, 'pd');
   console.log(data, "name");
 
+  console.log(ProductData, "ProductData");
+
   return (
     <>
      <Navbar/>  
@@ -32,9 +34,11 @@ import { useSingleProductQuery } from '../../Redux/Api/ProductAPI';
           <div className='flex flex-col justify-between'>
         <Imagesection
          image={image}
-         data={data ? data :ProductData }
+         data={ProductData ? ProductData : data }
          />
-        <ProductDetails />
+        <ProductDetails 
+         
+        />
         </div>
 
      <ItemData 
@@ -45,7 +49,7 @@ import { useSingleProductQuery } from '../../Redux/Api/ProductAPI';
         description={description}
         image={image}
         _id={_id}
-        data={data ? data :ProductData }
+        data={ProductData ? ProductData : data }
         isLoading={isLoading}/>
      </div>
 

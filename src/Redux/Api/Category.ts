@@ -28,7 +28,6 @@ import { api } from "./rtkAPI";
           console.log("I m cat2");
           return {
             url: "https://www.lohawalla.com/global/getCategories/publish",
-            // url: "https://www.lohawalla.com/global/searchData/ACCESSORIES roof",
             method: "GET",
           };
         },

@@ -7,9 +7,18 @@ export interface Row {
 
 interface TableProps {
     data: Row[];
+
+
+
 } 
 
+
+
+
+
 const Table: React.FC<TableProps> = ({ data }) => {
+
+  
     return (
         <div className="overflow-x-auto">
           <table className="w-full table-auto border">
