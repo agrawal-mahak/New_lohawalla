@@ -96,7 +96,7 @@ const SearchBox = (props: SearchBoxProps) => {
                             </>
                         ) : (
                             <>
-                                {/* Categories tab content */}
+                                {/* all the content available in categories searchresult */}
                             { props.searchResults ?(
                                     <ul>
                                         {props.searchResults.category?.map((searchResult, index) => (

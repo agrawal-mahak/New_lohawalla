@@ -13,14 +13,14 @@ interface ImagesectionProps {
   return (
     <div className='flex justify-between gap-[22px]  '>
        <div className="flex flex-col gap-[16px] justify-between ">
-          <img  src={image || (data && data.images && data.images[0]) || "https://m.media-amazon.com/images/I/51MLqxTajeL._SX679_.jpg"}  className="w-[92px] h-[86px] border" />
-          <img src={image || (data && data.images && data.images[0]) || "https://m.media-amazon.com/images/I/51MLqxTajeL._SX679_.jpg"}  className="w-[92px] h-[86px] border" />
-          <img src={image || (data && data.images && data.images[0]) || "https://m.media-amazon.com/images/I/51MLqxTajeL._SX679_.jpg"}  className="w-[92px] h-[86px] border" />
-          <img src={image || (data && data.images && data.images[0]) || "https://m.media-amazon.com/images/I/51MLqxTajeL._SX679_.jpg"} className="w-[92px] h-[86px] border"/>  
+          <img   src={data.images.length>0 ? (data.images ? data.images : data?.images[0]) : "https://m.media-amazon.com/images/I/51MLqxTajeL._SX679_.jpg"} className="w-[92px] h-[86px] border" />
+          <img  src={data.images.length>0 ? (data.images ? data.images : data?.images[0]) : "https://m.media-amazon.com/images/I/51MLqxTajeL._SX679_.jpg"}  className="w-[92px] h-[86px] border" />
+          <img  src={data.images.length>0 ? (data.images ? data.images : data?.images[0]) : "https://m.media-amazon.com/images/I/51MLqxTajeL._SX679_.jpg"}   className="w-[92px] h-[86px] border" />
+          <img  src={data.images.length>0 ? (data.images ? data.images : data?.images[0]) : "https://m.media-amazon.com/images/I/51MLqxTajeL._SX679_.jpg"}  className="w-[92px] h-[86px] border"/>  
        </div>
               
        <div>
-       <img src={image || (data && data.images && data.images[0]) || "https://m.media-amazon.com/images/I/51MLqxTajeL._SX679_.jpg"}  className="" />
+       <img  src={data.images.length>0 ? (data.images ? data.images : data?.images[0]) : "https://m.media-amazon.com/images/I/51MLqxTajeL._SX679_.jpg"}   className="" />
        </div>
     </div>
   )

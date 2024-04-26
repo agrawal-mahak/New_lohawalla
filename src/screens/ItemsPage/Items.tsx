@@ -124,6 +124,7 @@ useEffect(() => {
   if (location.state?.results) {
     setSearchResult(location.state.results);
     console.log(location.state.results, "searchresults");
+    
   }
 }, [location.state]);
 
@@ -158,15 +159,15 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className=" flex  h-full gap-[2rem] px-[1.67rem]">
-        <div className=" w-[270px]    pl-[30px] flex flex-col gap-[0.6rem] border-r-[2px]">
+      <div className=" flex  h-full gap-[2rem] px-[1.67rem] mt-[1.3rem] ">
+        <div className=" w-[270px]    pl-[30px] flex flex-col gap-[0.6rem] border-r-[2px] sticky top-[14rem]">
           <Filters categorychange={handleCategoryChange} />
           <Companies companychange={handleCompanyChange} /> 
     </div>
 
         <div className="flex flex-col gap-[1rem]">
      
-        <div className="w-full">
+        <div className="w-full ">
   {searchresult ? (
     searchresult.product?.slice(0, 9).map((i: any) => (
       <ItemCard
@@ -217,7 +218,7 @@ useEffect(() => {
 
           <span className="flex gap-[2.2rem]"> 
             {currentPage + 1}  
-            { currentPage -1}
+            
           </span>
 
             <div className="flex items-center gap-[1rem]" onClick={nextPage}>

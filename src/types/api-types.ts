@@ -343,6 +343,13 @@ export type AllOrderResponse = {
   orders: Order[];
 };
 
+
+export type orderResponse = {
+    success: boolean;
+      message: string; 
+      order:Order[];
+}
+
 export type AdminOrderCountResponse = {
   success: boolean;
   message: string;
